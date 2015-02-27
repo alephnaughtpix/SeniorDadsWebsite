@@ -369,6 +369,38 @@ body {
   }
 }
 
+#features{
+  #doxListContainer {
+    width: 100%;
+    display: block;
+    #doxList {
+      width: 60%;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      .item {
+        .logo, .text {
+          width: 50%;
+          margin: {
+            right: 10px;
+            bottom: 10px;
+          }
+          .logo {
+            text-align: center;
+          }
+          .text {
+            font: {
+              size: x-large;
+              weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .l33TsP33k {
   font: {
     size: xx-large;
@@ -570,6 +602,33 @@ table#dudes{
           weight: bold;
         }
       }
+    }
+  }
+}
+
+#netbest {
+  h2, h3 {
+    color: #ffff80;
+  }
+  ul#listings {
+    list-style: none;
+    li {
+      background: {
+        image: url(../images/disk.gif);
+        position: top left;
+        repeat: no-repeat;
+      }
+      padding-left: 80px;
+      padding-bottom: 15px;
+    }
+    .title {
+      font-weight: bold;
+      width: 50%;
+      height: 100%;
+      display: block;
+      float: left;
+    }
+    .info {
     }
   }
 }
