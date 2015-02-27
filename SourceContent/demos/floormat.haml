@@ -1,0 +1,74 @@
+- require "#{File.dirname(__FILE__)}/../code/SiteTasks"
+- demoInfo = Demo.GetByID( 5 )
+%html<>
+  %head<>
+    %title<> s3N10r dAdz d3M0z3C!!!111: The ST FLOORMAT DEMO!!!!
+    %meta{ :name => "Author", :content => "Old Fart of The Senior Dads"}<>
+    =render_partial :header_files
+  %body#demos<>
+    =render_partial :no_javascript
+    .lastUpdated<>
+    =render_partial :sub_header, :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
+    %h4{ :align => "center" }<> NOW THE TRUTH CAN BE TOLD!!!!
+    %h5{ :align => "center" }<> Our <span class="blink">first</span> demo was....
+    %h1{ :align => "center" }<> The ST FLOORMAT demo!
+    =render_partial :demo_stats, :demoInfo => demoInfo
+    #description
+      %h4<> TO RUN:
+      %ul<>
+        %img(src="../images/phase4mono.gif" title="pHas3 40uR sT3r30!!11! (In Mono!)" alt="pHas3 40uR sT3r30!!11! (In Mono!)" height="69" width="70" align="right")<>
+        %p<>
+          Double click on <strong>STFLRMAT.PRG</strong><br/><em>This program works on <strong>JTSFM</strong>, <strong>JTE</strong>, <strong>C-Lab Faclon, and PacifiST PC!</strong></em>
+      %h4<> The Story behind this demo:
+      %p<> If you're thinking this a stunning new demo to blast your JTS into another dimension, you're so wrong! In fact, this is a stunning <strong>old </strong>demo to blast your JTS into another dimension!!! This is in fact the <strong>first </strong>ever demo that we (Old Fart and Doddering Git) ever did, back in the days before we had a Faclon 070, ST Floormat was still around, and were still called Nonce and Jessie (A lot of people still don't understand the important ironic political point we were trying to make!). The reason you're seeing it now is because of certain &quot;legal&quot; problems.
+      %p<>
+        %a{ :href => "pc.html" }<>
+          %img(src="../images/demos/pacifist.gif" title="pAc1F1sT c0MpAt1Bl3!!1!" alt="pAc1F1sT c0MpAt1Bl3!!1!" height="60" width="147" align="right")<>
+        Fast Forward back to <strong>ST Floormat</strong>'s Oxember 1884 issue, which featured a demo feature on demos, called<strong><em> &quot;Demos- are they a load of crap or what?&quot;</em></strong>. A few months before they were asking for demo coders to contact them. Well, how could we refuse? So we contacted them, and agreed to do a demo for their cover disk, and signed a funny piece of paper with lots of big words to that effect.
+      %p<> Well, imagine our shock and horror when we saw the issue of ST Floormat and saw <strong>OUR DEMO GOING OUT UNDER OTHER PEOPLE'S NAMES!!!</strong> The bastards changed the gfx, muzix and skrollees, and said in their magazine:
+      %ul<>
+        %p{ :style => "font-face:Helvetica;" }<> &quot;We got our assembler experts to show they could beat those sad anorack demo coders at their own game- run this, and see how it <strong>should </strong>be done!&quot;
+      %p<> We phoned up the tossers, and told them to go forth and multiply! They then pointed out that with with the bit of paper we signed, the opposite applied! It's only now that <strong>ST Floormat</strong> is dead (Good riddance!) that we can release this demo. And also their laywers are off our backs, so we don't have to be nice to them any more either!
+    %hr<>
+    #creditsWrapperExtended<>
+      #credits<>
+        .header<> So here are the REAL credits:
+        .credit<>
+          .deed<>   Codez:
+          .detail<> Mega bit blasting and plotting stuff
+          .by<>     <a href="../crew/dudes.html#Old_Fart">Old Fart</a>
+        .credit<>
+          .deed<>
+          .detail<> Mega raster stuff and XBIOS musikx player
+          .by<>     <a href="../crew/dudes.html#Doddering_git">Doddering Git</a>
+        .credit<>
+          .deed<>   Skrolltext &amp; GFX:
+          .detail<> Senior Dads logo
+          .by<>     <a href="../crew/dudes.html#Jackson_Pollock">Jackson Pollock</a>
+        .credit<>
+          .deed<>
+          .detail<> Crap GFX stuff
+          .by<>     Ronny Pissawful
+        .credit<>
+          .deed<>
+          .detail<> Crap text stuff
+          .by<>     Toby Wankstain
+        .credit<>
+          .deed<>   Muzikx:
+          .detail<> Senior Dads fanfare. <strong>(For the first time ever in chip-muzaxx format!!!)</strong>
+          .by<>     <a href="../crew/dudes.html#Dame_Vera_Lynn">Dame Vera Lynn</a>
+        .credit<>
+          .deed<>
+          .detail<> Crappy &quot;Popcorn&quot; cover tune.
+          .by<>     Vincent Lentil (Not a patch on Dame Vera Lynn, is he?)
+        .credit<>
+          .deed<>   Raster Colour Design:
+          .detail<>
+          .by<>     Adrian Catflap (WE would chose better colours!)
+    %p<> At least WE give people proper credits!
+    %hr<>
+    #saggie<>
+      .title<>
+      .feature<>
+        Check out Maggie's highly inaccurate (but still nice!!) <a href="../features/saggie/floormat.html">review</a> of this demo!
+    .more{ :rel => "teckno.html"}<>

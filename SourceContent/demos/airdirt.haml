@@ -1,0 +1,57 @@
+- require "#{File.dirname(__FILE__)}/../code/SiteTasks"
+- demoInfo = Demo.GetByID( 4 )
+%html<>
+  %head<>
+    %title<> s3N10r dAdz d3M0z3C!!!111: tHa a1Rd1Rt d3M0!!!11!!1!
+    %meta{ :name => "Author", :content => "Old Fart of The Senior Dads"}<>
+    %meta{ :name => "Description", :content => "If you have a Falcon 030, then you might want to know about this absolutely stunning demo!"}<>
+    %meta{ :name => "KeyWords", :content => "Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, Falcon, Air, Dirt, Airdirt, Johnny, Rotten, Jony, Roten, Glen, Matlock, Steve, Jones"}<>
+    =render_partial :header_files
+  %body#demos<>
+    =render_partial :no_javascript
+    .lastUpdated<>
+    =render_partial :sub_header, :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
+    =render_partial :demo_stats, :demoInfo => demoInfo
+    #description
+      %p<> This classic of C-LAB FALCON 070 demo coding was released in <strong>October 1996.</strong> This was our first real <strong>multipart megademo!,</strong> and it got a <a href="../features/saggie/airdirt_maggie.html">rave review</A> from the established Atari diskmag <strong><a href="../features/saggie/default.html">Maggie</a></strong>!
+      %p<> It featured...
+      %img(src="../images/phase4.gif" title="pHas3 40uR sT3r30!!11!" alt="pHas3 40uR sT3r30!!11!" height="69" width="70" align="right")<>
+      %ul<>
+        %li<> Stunning 3D!
+        %li<> Amazing shade-bobs!
+        %li<> Motion blur!
+        %li<> Filled vector tunnels!
+        %li<> A mega 64000-dot starfield!
+        %li<> A preview of our DSP &quot;doom&quot; clone!
+        %li<> Great graphics from Jackson Pollock!
+        %li<> A stunning soundtrack in PHASE FOUR STEREO by Dame Vera Lynn!
+        %li<> A stunning endpart with sound and anims of a punky theme!
+    %hr<>
+    #creditsWrapper<>
+      #credits<>
+        .header<> Credits for this MEGA demo!
+        .credit<>
+          .deed<> Code
+          .by<>
+            %ul<>
+              %li<> <a href="../crew/dudes.html#Old_Fart">Old Fart</a>
+              %li<> <a href="../crew/dudes.html#Doddering_git">Doddering Git</a>
+        .credit<>
+          .deed<> Music
+          .by<>
+            %ul<>
+              %li<> &quot;<a href="../music/default.html#MoveYourAss">Move your Ass To The Senior Dads</A>&quot; by <a href="../crew/dudes.html#Dame_Vera_Lynn">Dame Vera Lynn</a>
+              %li<> Sample of &quot;Ring Ring&quot; by <a target="_blank" HREF="http://en.wikipedia.org/wiki/Ring_Ring_(song)">Abba</a> (In honour of all the famous Swedish Atari coders!)
+              %li<> &quot;Anarchy in the UK&quot;, performed by Doddering Git and Old Fart, produced and mixed by Dame Vera Lynn.
+        .credit<>
+          .deed<> GFX
+          .by<>   <a href="../crew/dudes.html#Jackson_Pollock">Jackson Pollock</a>
+    %hr<>
+    %p<> The version released was the second version of the demo. The first was scrapped when persons who shall remain nameless (IPIR!!!) decided to release an early version of it as their &quot;own&quot; demo at the NASA96 show! (That's the last time we'll show you our source-code guys!) However it made us more determined to get a killer demo out, and we did!
+    #saggie<>
+      .title<>
+      .feature<>
+        %ul<>
+          %li<> Check out the <a href="../features/saggie/airdirt_maggie.html">rave review</a> of this demo we got from Maggie, the established Atari diskmag!
+          %li<> Also, check out <a href="../features/saggie/airdirt_poom.html">this</a> bit of "gossip" about the demo!
+    .more{ :rel => "floormat.html"}<>

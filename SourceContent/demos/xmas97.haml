@@ -1,0 +1,57 @@
+- require "#{File.dirname(__FILE__)}/../code/SiteTasks"
+- demoInfo = Demo.GetByID( 7 )
+%html<>
+  %head<>
+    %title<> s3N10r dAdz d3M0z3C!!!111: The XMAS CARD 97 Demo!!!
+    %meta{ :name => "Author", :content => "Old Fart of The Senior Dads"}<>
+    %meta{ :name => "Description", :content => "2000 years ago Jesus was born, and was visited by 3 wise men! 2000 years later... the Senior Dads are born, and we're FIVE wise men!!! Download This great demo, or we'll show our wrath...."}<>
+    %meta{ :name => "KeyWords", :content => "Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, Falcon, Xmas, card, 97"}<>
+    =render_partial :header_files
+  %body#demos<>
+    =render_partial :no_javascript
+    .lastUpdated<>
+    =render_partial :sub_header, :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
+    %div{ :align => "center" }<>
+      %table{ :cellspacing => "0", :cellpadding => "0", :style => "font-face: Bookman Old Style; font-weight: bold;"}<>
+        %tr<>
+          %td<>
+            2000 years ago Jesus was born, and was visited by 3 wise men!
+          %td<>
+        %tr<>
+          %td<>
+          %td<>
+            2000 years later... the <a href="../default.html">Senior Dads</a> are born, and we're <a href="../crew/dudes.html">FIVE</a> wise men!!!
+      %h1{ :style => "font-family: Lucida Console;" }<>
+        The XMAS CARD 97 demo!
+    =render_partial :demo_stats, :demoInfo => demoInfo
+    #description
+      %img(src="../images/phase4.gif" title="pHas3 40uR sT3r30!!11!" alt="pHas3 40uR sT3r30!!11!" height="69" width="70" align="right")<>
+      %h4
+        TO RUN:
+      %ul Double click on <strong>XMAS97.PRG</strong><br/><em>This demo is only for the <strong>JTS Faclon 070</strong>, because it's so powerful! (the demo, we mean!!!)</em>
+      %div{ :style => "font-size: larger;" }<>
+        %p<> Yes, the coding gods return with our fabbydabbydoo Xmas 97 Card demo! It was meant to be released in Xmas 1996 but we couldn't because it was 1997! So we thought... Why not release it at Xmas 1997? Not only are we great coders, but we're really smart as well!!!
+        %p<> Insted of watching the Queens speech on telly, why not instead boot up your JTS Faclon 070 (By which I mean switch it on, not kick it, as you would damage the thing!) and run this fairytale multimedia infotainnment internet-style cyberphunk oddessy thru Xmas, done by us!!
+        %p<> In this demo, expect:
+        %ul<>
+          %li<> Stunning multimedia excursions!!!
+          %li<> A really top-notch pumping hardcore Xmas medley!
+          %li<> Effects you would never expect to see on a humble Faclon!
+          %li<> Meet Frosty the Snowman!
+        %blockquote<> There's also a special HIDDEN screen which contains stuff which is.. Lets say a little revealing!
+    #creditsWrapper<>
+      #credits<>
+        .header<> CREDITZ!
+        .credit<>
+          .deed<> <a href="../filez/source/xmas97s.zip">BITZ</a>:
+          .by<>   <a href="../crew/dudes.html#Old_Fart">Old Fart</a><br/><a href="../crew/dudes.html#Doddering_git">Doddering Git</a>
+        .credit<>
+          .deed<> <a href="../music/default.html">ZIKS</a>:
+          .by<>   <a href="../crew/dudes.html#Dame_Vera_Lynn">Dame Vera Lynn</a>
+        .credit<>
+          .deed<> <a href="../gfx/default.html">FIKS</A>:
+          .by<>   <a href="../crew/dudes.html#Jackson_Pollock">Jackson Pollock</A>
+    %p<>
+    %hr<>
+    %p{ :style => "font-size: larger;" }<> Stay cool, stay Senior!
+    .more{ :rel => "dadplazz.html"}<>

@@ -1,0 +1,12 @@
+
+- foo = "hello!"
+- foo << " there"
+- foo << " you!"
+:ruby
+  output = Haml::Engine.new(File.read('C:\Users\MichaelJ\Dropbox\dadweb\seniordads\SourceContent\test\_layout.html.haml')).render do
+    Haml::Engine.new(File.read('C:\Users\MichaelJ\Dropbox\dadweb\seniordads\SourceContent\test\test.haml')).render
+  end
+
+%p= foo
+%p= output
+%p test
