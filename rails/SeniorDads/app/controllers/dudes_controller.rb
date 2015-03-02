@@ -3,4 +3,9 @@ class DudesController < ApplicationController
   end
   def faq
   end
+
+  def index
+    render :default
+  end
+
 end

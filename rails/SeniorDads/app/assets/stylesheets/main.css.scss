@@ -50,7 +50,7 @@ body {
 	@include mainTextStyle;
 	background: {
 		color: #000077;
-		image: url(../images/sad_back.gif);
+		image: url(/images/sad_back.gif);
 		repeat: repeat;
 	}
 	.highlight {

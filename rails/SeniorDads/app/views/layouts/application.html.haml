@@ -4,9 +4,9 @@
     %title<>= yield :title
     %meta{ :name => "Author", :content => yield(:author) }<>
     %meta{ :name => "Description", :content => yield(:description) }<>
-    %meta{ :name => "KeyWords", :content => yield(:keywords) }<>
+    %meta{ :name => "KeyWords", :content => "Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, Falcon, ST, STFM, STE, " + yield(:keywords) }<>
     =yield :head
     =render "partials/header_files"
   %body{ :id => yield(:style_id) }<>
     = render "partials/no_javascript"
-    = yield
+    = content_for?(:main) ? yield(:main) : yield
