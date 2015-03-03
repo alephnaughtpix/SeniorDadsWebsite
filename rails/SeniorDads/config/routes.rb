@@ -33,8 +33,16 @@ Rails.application.routes.draw do
   get '/demos/emu.html', to: 'demos#emu'
 
   # Now the demos...
-
-
+  get '/demos/atuck.html', to: 'demos#atuck'        # "Anal tuck"
+  get '/demos/colonic.html', to: 'demos#colonic'    # "Colonic Irrigation"
+  get '/demos/ladmds2.html', to: 'demos#ladmds2'    # "L'Aube du Matin Du Soir II (remix)"
+  get '/demos/airdirt.html', to: 'demos#airdirt'    # "The Air Dirt Demo"
+  get '/demos/floormat.html', to: 'demos#floormat'  # "The ST Floormat Demo"
+  get '/demos/teckno.html', to: 'demos#teckno'      # "The 'Anti Teckno' Teckno Demo"
+  get '/demos/xmas97.html', to: 'demos#xmas97'      # "Xmas Card '97"
+  get '/demos/dadplazz.html', to: 'demos#dadplazz'  # "DadPlazz!"
+  get '/demos/mono.html', to: 'demos#mono'          # "Monomental"
+  get '/demos/fake.html', to: 'demos#fake'          # "Ultimate Fake Demo"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

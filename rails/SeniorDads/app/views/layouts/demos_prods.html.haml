@@ -1,10 +1,6 @@
-- content_for :keywords do
-  demos, d3M0c!!, #{yield :keywords}
-- content_for :style_id do
-  demos
-- content_for :main do
-  .lastUpdated<>
-  = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
-  = content_for?(:main) ? yield(:main) : yield
+- content_for :content do
+  = yield(:intro_content)
+  = render "partials/demo_stats", :demoInfo => @demo
+  = content_for?(:main_content) ? yield(:main_content) : yield
 
-= render :file => 'layouts/application'
+= render :file => 'layouts/demos_basic'

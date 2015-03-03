@@ -1,10 +1,12 @@
+- content_for :title do
+  s3N10r dAdz d3M0z3C!!!111: #{yield :sub_title}
 - content_for :keywords do
-  demos, d3M0c!!, #{yield :keywords}
+  demos, d3M0c!!, #{yield :sub_keywords}
 - content_for :style_id do
-  demos
+  = content_for?(:style_id) ? yield(:style_id) : "demos"
 - content_for :main do
   .lastUpdated<>
   = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
-  = content_for?(:main) ? yield(:main) : yield
+  = content_for?(:content) ? yield(:content) : yield
 
 = render :file => 'layouts/application'
