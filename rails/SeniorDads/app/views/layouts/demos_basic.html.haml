@@ -2,7 +2,7 @@
   s3N10r dAdz d3M0z3C!!!111: #{yield :sub_title}
 - content_for :keywords do
   demos, d3M0c!!, #{yield :sub_keywords}
-- content_for :style_id do
+- content_for :style_id, flush: true do
   = content_for?(:style_id) ? yield(:style_id) : "demos"
 - content_for :main do
   .lastUpdated<>

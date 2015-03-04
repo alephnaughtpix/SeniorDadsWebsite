@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :site_file_types
+
+  resources :pictures
+
+  get 'pictures/default'
+
   resources :dudes
 
 #  get 'dudes/default'
@@ -43,6 +49,18 @@ Rails.application.routes.draw do
   get '/demos/dadplazz.html', to: 'demos#dadplazz'  # "DadPlazz!"
   get '/demos/mono.html', to: 'demos#mono'          # "Monomental"
   get '/demos/fake.html', to: 'demos#fake'          # "Ultimate Fake Demo"
+
+  # GFX section =======================================================================================================
+
+  resources :pictures
+  get '/gfx/default.html', to: 'pictures#default'
+
+  # DADMIN section ====================================================================================================
+
+  # Basic site file types...
+  resources :site_file_types
+
+  # ===================================================================================================================
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

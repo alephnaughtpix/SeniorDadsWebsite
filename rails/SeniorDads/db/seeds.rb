@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+site_file_types = SiteFileType.create([ { title: 'Binary file', description: '' }, { title: 'Graphics', description: '' }, { title: 'Music', description: '' } ])

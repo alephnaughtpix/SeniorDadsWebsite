@@ -1,0 +1,11 @@
+!!!
+%html<>
+  %head<>
+    %title<>= yield :title
+    %meta{ :name => "Author", :content => yield(:author) }<>
+    %meta{ :name => "Description", :content => yield(:description) }<>
+    %meta{ :name => "KeyWords", :content => "Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, Falcon, ST, STFM, STE, " + yield(:keywords) }<>
+    =yield :head
+  %body{ :id => yield(:style_id) }<>
+    %h1<> Dadmin
+    = content_for?(:main) ? yield(:main) : yield
