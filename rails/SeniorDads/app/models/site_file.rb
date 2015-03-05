@@ -1,17 +1,5 @@
 class SiteFile < ActiveRecord::Base
-    @name = ""
-    @url = ""
-
-    def initialize(name, url)
-        @name = name
-        @url = url
-    end
-
-    def name
-        @name
-    end
-
-    def url
-        @url
-    end
+  belongs_to :site_file_type
+  has_many :gallery_collections
+  has_many :galleries, :through => :gallery_collections
 end

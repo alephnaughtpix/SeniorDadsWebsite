@@ -11,20 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304160652) do
+ActiveRecord::Schema.define(version: 20150305120457) do
 
   create_table "demos", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "pictures", force: true do |t|
+  create_table "galleries", force: true do |t|
+    t.string   "name"
     t.string   "title"
-    t.string   "url"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "gallery_collections", force: true do |t|
+    t.integer  "gallery_id"
+    t.integer  "site_file_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pictures", force: true do |t|
+    t.text     "description"
+    t.integer  "site_file_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["site_file_id"], name: "index_pictures_on_site_file_id"
 
   create_table "site_file_types", force: true do |t|
     t.string   "title"
@@ -36,9 +51,13 @@ ActiveRecord::Schema.define(version: 20150304160652) do
   create_table "site_files", force: true do |t|
     t.string   "name"
     t.string   "url"
+    t.text     "description"
     t.integer  "site_file_type_id"
+    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "site_files", ["site_file_type_id"], name: "index_site_files_on_site_file_type_id"
 
 end

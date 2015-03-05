@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :demos
+
+  resources :galleries
+
+  resources :pictures
+
+  resources :site_files
+
   resources :site_file_types
 
   resources :pictures

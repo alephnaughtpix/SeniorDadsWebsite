@@ -3,9 +3,13 @@
 one:
   name: MyString
   url: MyString
+  description: MyText
   site_file_type_id: 
+  order: 1
 
 two:
   name: MyString
   url: MyString
+  description: MyText
   site_file_type_id: 
+  order: 1
