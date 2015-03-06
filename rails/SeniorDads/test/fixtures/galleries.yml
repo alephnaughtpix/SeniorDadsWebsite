@@ -2,12 +2,8 @@
 
 one:
   name: MyString
-  url: MyString
-  description: MyText
-  site_file_type_id: 
+  title: MyString
 
 two:
   name: MyString
-  url: MyString
-  description: MyText
-  site_file_type_id: 
+  title: MyString

@@ -14,6 +14,57 @@ SiteFileType.create([
 ])
 
 gfx = SiteFileType.find_by( title: 'gfx')
+bin = SiteFileType.find_by( title: 'bin')
+
+# Demos
+Demo.create([
+    # "Anal Tuck"
+    {
+        name: 'atuck',
+        title: 'aNaL tUcK!!!11',
+        platform: 'aTaR1 fAlC0n 0nLy!!!1!',
+        size: 60,
+        release_date: "1995-04-16 18:55:00",
+        site_file: SiteFile.create(
+            name: 'Anal Tuck',
+            url: '/filez/demos/analtuck.lzh',
+            description: 'Local copy.',
+            site_file_type: bin
+        ),
+        site_files: SiteFile.create([
+            {
+                name: 'Anal Tuck',
+                url: 'ftp://ftp.funet.fi/pub/atari/falcon/demo/analtuck.lzh',
+                description: 'Mirror 1.',
+                site_file_type: bin
+            },
+            {
+                name: 'Anal Tuck',
+                url: 'ftp://sunsite.doc.ic.ac.uk/computing/systems/atari/umich/Falcon/Demos/analtuck.lzh',
+                description: 'Mirror 2.',
+                site_file_type: bin
+            },
+            {
+                name: 'Anal Tuck',
+                url: 'ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/96kdemos/ANALTUCK.LZH',
+                description: 'Mirror 3.',
+                site_file_type: bin
+            }
+        ]),
+        gallery: Gallery.create(
+            name: 'atuck',
+            title: '"Anal Tuck" Gallery',
+            site_files: SiteFile.create([
+                {
+                    name: 'atuck1',
+                    url: '/images/demos/atuck.gif',
+                    description: 'A legend is born!!!!',
+                    site_file_type: gfx
+                }
+            ])
+        )
+    }
+])
 
 # Jackson Pollock's Gallery
 Gallery.create(
