@@ -187,7 +187,7 @@ class OldDemo
             "../filez/demos/fake.zip",
             nil,
             [
-                OldSiteFile.new("Our first FAKE demo!!!","../images/demos/fake.gi")
+                OldSiteFile.new("Our first FAKE demo!!!","../images/demos/fake.gif")
             ]
         )
     end

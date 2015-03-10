@@ -76,39 +76,39 @@ class DemosController < ApplicationController
     end
 
     def colonic
-        @demo = OldDemo.GetByID(2)
+        @demo = Demo.find_by( name: 'colonic' )
     end
 
     def ladmds2
-        @demo = OldDemo.GetByID(3)
+        @demo = Demo.find_by( name: 'ladmds2' )
     end
 
     def airdirt
-        @demo = OldDemo.GetByID(4)
+        @demo = Demo.find_by( name: 'airdirt' )
     end
 
     def floormat
-        @demo = OldDemo.GetByID(5)
+        @demo = Demo.find_by( name: 'floormat' )
     end
 
     def teckno
-        @demo = OldDemo.GetByID(6)
+        @demo = Demo.find_by( name: 'teckno' )
     end
 
     def xmas97
-        @demo = OldDemo.GetByID(7)
+        @demo = Demo.find_by( name: 'xmas97' )
     end
 
     def dadplazz
-        @demo = OldDemo.GetByID(8)
+        @demo = Demo.find_by( name: 'dadplazz' )
     end
 
     def mono
-        @demo = OldDemo.GetByID(9)
+        @demo = Demo.find_by( name: 'mono' )
     end
 
     def fake
-        @demo = OldDemo.GetByID(10)
+        @demo = Demo.find_by( name: 'fake' )
     end
 
 #  private

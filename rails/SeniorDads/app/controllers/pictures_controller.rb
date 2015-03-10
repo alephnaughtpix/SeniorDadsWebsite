@@ -11,7 +11,7 @@ class PicturesController < ApplicationController
 
   def default
     @pictures = Gallery.find_by( name: 'JPG' ).site_files
-    render :layout => "demos_basic"
+    render :layout => "application"
   end
 
   # GET /pictures/1

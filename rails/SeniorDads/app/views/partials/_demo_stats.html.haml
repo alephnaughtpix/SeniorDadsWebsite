@@ -1,13 +1,13 @@
 #demoStats<>
   .container<>
     .stats<>
-      .header<> #{demoInfo.name}
+      .header<> #{demoInfo.title}
       .platform<> #{demoInfo.platform}
       .released<> Released: #{demoInfo.release_date}!!!!
       .downloads<>
         .mainfile<>
-          %a{ :href => demoInfo.mainFile.url }<>
-            %img{ :title=> demoInfo.site_file.name, :alt=> demoInfo.site_file.name, :src=> "../images/disk1.gif", :class => "disk", :height => "37", :width => "34" }<>
+          %a{ :href => demoInfo.site_file.url }<>
+            %img{ :title=> demoInfo.site_file.name, :alt=> demoInfo.site_file.name, :src=> "/images/disk1.gif", :class => "disk", :height => "37", :width => "34" }<>
           %a{ :href => demoInfo.site_file.url }<>
             Shift Clicky 2 Downloady! (#{demoInfo.size}K)
         - unless demoInfo.site_files.nil?
@@ -17,6 +17,6 @@
               - (0..demoInfo.site_files.size-1).each do |i|
                 %li<>
                   %a{ :href => demoInfo.site_files[i].url }<>
-                    %img{ :src => "../images/disk#{i+2}.gif", :class => "disk", :title => "#{demoInfo.site_files[i].name}", :alt => "#{demoInfo.site_files[i].name}", :height => "37", :width => "34"}<>
-    .image{ :align => "center", :valign => "top"}<>
-      %img{ :src => demoInfo.gallery.site_files.first.url, :title => demoInfo.gallery.site_files.first.name, :alt => demoInfo.gallery.site_files.first.name }<>
+                    %img{ :src => "/images/disk#{i+2}.gif", :class => "disk", :title => "#{Demo.mirror_name(i)}", :alt => "#{Demo.mirror_name(i)}", :height => "37", :width => "34"}<>
+    .gallery{ :align => "center", :valign => "top"}<>
+      %img{ :src => demoInfo.gallery.site_files.first.url, :title => demoInfo.gallery.site_files.first.description, :alt => demoInfo.gallery.site_files.first.description }<>

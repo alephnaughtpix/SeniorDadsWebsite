@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :demos
+  #resources :demos
 
   resources :galleries
 

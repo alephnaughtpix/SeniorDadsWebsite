@@ -1,6 +1,6 @@
 - content_for :content do
   = yield(:intro_content)
-  = render "partials/demo_stats", :demoInfo => @demo
+  = render "partials/old_demo_stats", :demoInfo => @demo
   = content_for?(:main_content) ? yield(:main_content) : yield
-  = render "partials/more", :demo_info => @demo
+
 = render :file => 'layouts/demos_basic'

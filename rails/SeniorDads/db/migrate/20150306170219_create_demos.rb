@@ -8,6 +8,7 @@ class CreateDemos < ActiveRecord::Migration
       t.datetime :release_date
       t.references :site_file, index: true
       t.references :gallery, index: true
+      t.integer :demo_order
 
       t.timestamps
     end

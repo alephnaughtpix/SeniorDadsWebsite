@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306170635) do
+ActiveRecord::Schema.define(version: 20150310160544) do
 
   create_table "demo_file_collections", force: true do |t|
     t.integer  "demo_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150306170635) do
     t.datetime "release_date"
     t.integer  "site_file_id"
     t.integer  "gallery_id"
+    t.integer  "demo_order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,6 +56,35 @@ ActiveRecord::Schema.define(version: 20150306170635) do
 
   add_index "gallery_collections", ["gallery_id"], name: "index_gallery_collections_on_gallery_id"
   add_index "gallery_collections", ["site_file_id"], name: "index_gallery_collections_on_site_file_id"
+
+  create_table "music_file_types", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "music_files", force: true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "site_file_id"
+    t.integer  "music_file_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "music_files", ["music_file_type_id"], name: "index_music_files_on_music_file_type_id"
+  add_index "music_files", ["site_file_id"], name: "index_music_files_on_site_file_id"
+
+  create_table "pictures", force: true do |t|
+    t.text     "description"
+    t.integer  "site_file_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["site_file_id"], name: "index_pictures_on_site_file_id"
 
   create_table "site_file_types", force: true do |t|
     t.string   "title"
