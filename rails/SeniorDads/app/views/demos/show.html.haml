@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Ref:
+  = @demo.ref
+%p
+  %b Name:
+  = @demo.name
+%p
+  %b Platform:
+  = @demo.platform
+%p
+  %b Size:
+  = @demo.size
+%p
+  %b Release date:
+  = @demo.release_date
+%p
+  %b Site file:
+  = @demo.site_file
+%p
+  %b Gallery:
+  = @demo.gallery
+
+= link_to 'Edit', edit_demo_path(@demo)
+\|
+= link_to 'Back', demos_path

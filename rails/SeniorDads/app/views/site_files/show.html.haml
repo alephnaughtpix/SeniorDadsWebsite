@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @site_file.name
+%p
+  %b Url:
+  = @site_file.url
+%p
+  %b Description:
+  = @site_file.description
+%p
+  %b Site file type:
+  = @site_file.site_file_type
+%p
+  %b Order:
+  = @site_file.order
+
+= link_to 'Edit', edit_site_file_path(@site_file)
+\|
+= link_to 'Back', site_files_path

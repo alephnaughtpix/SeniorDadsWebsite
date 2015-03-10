@@ -1,0 +1,33 @@
+%h1 Listing demos
+
+%table
+  %thead
+    %tr
+      %th Ref
+      %th Name
+      %th Platform
+      %th Size
+      %th Release date
+      %th Site file
+      %th Gallery
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @demos.each do |demo|
+      %tr
+        %td= demo.ref
+        %td= demo.name
+        %td= demo.platform
+        %td= demo.size
+        %td= demo.release_date
+        %td= demo.site_file
+        %td= demo.gallery
+        %td= link_to 'Show', demo
+        %td= link_to 'Edit', edit_demo_path(demo)
+        %td= link_to 'Destroy', demo, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Demo', new_demo_path

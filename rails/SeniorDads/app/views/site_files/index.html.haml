@@ -1,0 +1,29 @@
+%h1 Listing site_files
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Url
+      %th Description
+      %th Site file type
+      %th Order
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @site_files.each do |site_file|
+      %tr
+        %td= site_file.name
+        %td= site_file.url
+        %td= site_file.description
+        %td= site_file.site_file_type
+        %td= site_file.order
+        %td= link_to 'Show', site_file
+        %td= link_to 'Edit', edit_site_file_path(site_file)
+        %td= link_to 'Destroy', site_file, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Site file', new_site_file_path

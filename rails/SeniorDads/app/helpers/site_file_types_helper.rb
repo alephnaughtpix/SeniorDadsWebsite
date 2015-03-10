@@ -1,0 +1,2 @@
+module SiteFileTypesHelper
+end

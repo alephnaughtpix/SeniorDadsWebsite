@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @site_file_type.title
+%p
+  %b Description:
+  = @site_file_type.description
+
+= link_to 'Edit', edit_site_file_type_path(@site_file_type)
+\|
+= link_to 'Back', site_file_types_path

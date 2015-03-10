@@ -1,0 +1,23 @@
+%h1 Listing site_file_types
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Description
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @site_file_types.each do |site_file_type|
+      %tr
+        %td= site_file_type.title
+        %td= site_file_type.description
+        %td= link_to 'Show', site_file_type
+        %td= link_to 'Edit', edit_site_file_type_path(site_file_type)
+        %td= link_to 'Destroy', site_file_type, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Site file type', new_site_file_type_path

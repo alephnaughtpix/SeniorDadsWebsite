@@ -1,0 +1,31 @@
+= form_for @demo do |f|
+  - if @demo.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@demo.errors.count, "error")} prohibited this demo from being saved:"
+      %ul
+        - @demo.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :ref
+    = f.text_field :ref
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :platform
+    = f.text_field :platform
+  .field
+    = f.label :size
+    = f.text_field :size
+  .field
+    = f.label :release_date
+    = f.datetime_select :release_date
+  .field
+    = f.label :site_file
+    = f.text_field :site_file
+  .field
+    = f.label :gallery
+    = f.text_field :gallery
+  .actions
+    = f.submit 'Save'
