@@ -1,3 +1,4 @@
 class DemoFileCollection < ActiveRecord::Base
-  belongs_to :site_files
+  belongs_to :demo
+  belongs_to :site_file
 end

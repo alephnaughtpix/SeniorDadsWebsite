@@ -11,12 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305120457) do
+ActiveRecord::Schema.define(version: 20150306170635) do
 
-  create_table "demos", force: true do |t|
+  create_table "demo_file_collections", force: true do |t|
+    t.integer  "demo_id"
+    t.integer  "site_file_id"
+    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "demo_file_collections", ["demo_id"], name: "index_demo_file_collections_on_demo_id"
+  add_index "demo_file_collections", ["site_file_id"], name: "index_demo_file_collections_on_site_file_id"
+
+  create_table "demos", force: true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "platform"
+    t.integer  "size"
+    t.datetime "release_date"
+    t.integer  "site_file_id"
+    t.integer  "gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "demos", ["gallery_id"], name: "index_demos_on_gallery_id"
+  add_index "demos", ["site_file_id"], name: "index_demos_on_site_file_id"
 
   create_table "galleries", force: true do |t|
     t.string   "name"
@@ -32,14 +53,8 @@ ActiveRecord::Schema.define(version: 20150305120457) do
     t.datetime "updated_at"
   end
 
-  create_table "pictures", force: true do |t|
-    t.text     "description"
-    t.integer  "site_file_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pictures", ["site_file_id"], name: "index_pictures_on_site_file_id"
+  add_index "gallery_collections", ["gallery_id"], name: "index_gallery_collections_on_gallery_id"
+  add_index "gallery_collections", ["site_file_id"], name: "index_gallery_collections_on_site_file_id"
 
   create_table "site_file_types", force: true do |t|
     t.string   "title"
@@ -53,7 +68,6 @@ ActiveRecord::Schema.define(version: 20150305120457) do
     t.string   "url"
     t.text     "description"
     t.integer  "site_file_type_id"
-    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

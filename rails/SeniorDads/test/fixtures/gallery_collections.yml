@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  galleries_id: 
-  site_files_id: 
+  gallery_id: 
+  site_file_id: 
 
 two:
-  galleries_id: 
-  site_files_id: 
+  gallery_id: 
+  site_file_id: 
