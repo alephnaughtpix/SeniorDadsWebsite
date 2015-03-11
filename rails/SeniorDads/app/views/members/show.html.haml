@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @member.name
+%p
+  %b Member type:
+  = @member.member_type
+%p
+  %b Title:
+  = @member.title
+%p
+  %b Joined:
+  = @member.joined
+%p
+  %b Join reason:
+  = @member.join_reason
+%p
+  %b Function:
+  = @member.function
+%p
+  %b First computer:
+  = @member.first_computer
+%p
+  %b Any other comments:
+  = @member.any_other_comments
+%p
+  %b Site file:
+  = @member.site_file
+
+= link_to 'Edit', edit_member_path(@member)
+\|
+= link_to 'Back', members_path

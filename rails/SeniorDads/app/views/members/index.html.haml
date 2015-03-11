@@ -1,0 +1,37 @@
+%h1 Listing members
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Member type
+      %th Title
+      %th Joined
+      %th Join reason
+      %th Function
+      %th First computer
+      %th Any other comments
+      %th Site file
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @members.each do |member|
+      %tr
+        %td= member.name
+        %td= member.member_type
+        %td= member.title
+        %td= member.joined
+        %td= member.join_reason
+        %td= member.function
+        %td= member.first_computer
+        %td= member.any_other_comments
+        %td= member.site_file
+        %td= link_to 'Show', member
+        %td= link_to 'Edit', edit_member_path(member)
+        %td= link_to 'Destroy', member, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Member', new_member_path

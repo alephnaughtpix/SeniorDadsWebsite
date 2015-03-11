@@ -1,8 +1,8 @@
 #demoStats<>
   .container<>
     .stats<>
-      .header<> #{demoInfo.title}
-      .platform<> #{demoInfo.platform}
+      .header<> #{demoInfo.title.html_safe}
+      .platform<> (#{demoInfo.platform})
       .released<> Released: #{demoInfo.release_date}!!!!
       .downloads<>
         .mainfile<>

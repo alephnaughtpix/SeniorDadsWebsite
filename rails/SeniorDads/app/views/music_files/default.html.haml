@@ -1,0 +1,31 @@
+- content_for :title do
+  The greatest music composer in the history of space/time!
+- content_for :author do
+  Dame Vera Lynn. Of the SD!!!
+- content_for :description do
+  You are obviously a sensible person of refined tastes and values, because you have arrived at the hub of sound creation itself! DAME VERA LYNN of the SENIOR DADS!
+- content_for :keywords do
+  music, zik, zax, muzzax, chill, techno, modules, soundtracker, badass, yo, dame, vera, lynn, in, da, haass
+- content_for :style_id do
+  choons
+=render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "cH00nZ!!11!!", :sectionUrl => "."
+%h1{ :align => "center" }<>
+  <span class="blink">o</span>r<span class="blink">.</span>.
+%h1{ :align => "center" }<> 
+  The SENIOR DADS <FONT COLOR="#FF00FF">J</FONT><FONT COLOR="#0000FF">U</FONT><FONT COLOR="#80FFFF">K</FONT><FONT COLOR="#00FF00">E</FONT>B<FONT COLOR="#FF8000">O</FONT><FONT COLOR="#FF0000">X</FONT><FONT COLOR="#BA5401">!</FONT></H1>
+%p<>
+  <img src="../images/damevera.jpg" height='72' width='144' align='RIGHT'> You are obviously a sensible person of refined tastes and values, because you have arrived at the hub of sound creation itself! Yes, c'est moi, <strong>Dame Vera Lynn</strong>, cranking out da wicked badboy chunes from the killer wheelz o' steel. Well, actually, it's with the benefit of those mighty soundtrakka programs <strong>Protracker</strong> and <strong>Xbios Music Maker</strong>, but that's my metaphorical wheelz o' steel on the Atari, so fuck dat shit forra laff!
+%h3<> Enough of the bull, <span class="blink">daddio,</span> give us tha hardcore beatz!!
+%p<> Okey-dokey- hit it maestro!
+%ul.musiclist<>
+  - @music_files.each do |music_file|
+    %li{ :class => "musicitem #{music_file.music_file_type.name}" }<>
+      .title<>
+        %a(name="#{music_file.name}")<>
+        %a(href="#{music_file.site_file.url}")<> #{music_file.title}
+      .info<>
+        #{music_file.description.html_safe}
+%h3<> Is that all, Mr Music Man?
+%p<> Quality, not quantity, that's my motto!
+%p<> Peace.
+%p<> <strong><em>Dame VL</em></strong>

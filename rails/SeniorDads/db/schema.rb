@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310160544) do
+ActiveRecord::Schema.define(version: 20150311141448) do
 
   create_table "demo_file_collections", force: true do |t|
     t.integer  "demo_id"
@@ -56,6 +56,30 @@ ActiveRecord::Schema.define(version: 20150310160544) do
 
   add_index "gallery_collections", ["gallery_id"], name: "index_gallery_collections_on_gallery_id"
   add_index "gallery_collections", ["site_file_id"], name: "index_gallery_collections_on_site_file_id"
+
+  create_table "member_types", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "members", force: true do |t|
+    t.string   "name"
+    t.integer  "member_type_id"
+    t.string   "title"
+    t.datetime "joined"
+    t.text     "join_reason"
+    t.text     "function"
+    t.string   "first_computer"
+    t.text     "any_other_comments"
+    t.integer  "site_file_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "members", ["member_type_id"], name: "index_members_on_member_type_id"
+  add_index "members", ["site_file_id"], name: "index_members_on_site_file_id"
 
   create_table "music_file_types", force: true do |t|
     t.string   "name"

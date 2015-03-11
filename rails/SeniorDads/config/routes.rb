@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :members
+
+  resources :member_types
+
   #resources :demos
 
   resources :galleries
-
-  resources :pictures
 
   resources :site_files
 
@@ -32,12 +34,12 @@ Rails.application.routes.draw do
   # CREW section: =====================================================================================================
 
   # Main page
-  get '/crew/', to: 'dudes#default'
-  get '/crew/default.html', to: 'dudes#default'
-  get '/crew/dudes.html', to: 'dudes#default'
+  get '/crew/', to: 'members#default'
+  get '/crew/default.html', to: 'members#default'
+  get '/crew/dudes.html', to: 'members#default'
 
   # FAQ
-  get '/crew/faq.html', to: 'dudes#faq'
+  get '/crew/faq.html', to: 'members#faq'
 
   # DEMOS section: ====================================================================================================
 
@@ -62,6 +64,22 @@ Rails.application.routes.draw do
 
   resources :pictures
   get '/gfx/default.html', to: 'pictures#default'
+  get '/gfx/',             to: 'pictures#default'
+
+  # Music section =====================================================================================================
+
+  get '/music/default.html', to: 'music_files#default'
+  get '/music/index.html',   to: 'music_files#default'
+  get '/music/',             to: 'music_files#default'
+  
+  # Features section ==================================================================================================
+
+  get '/features/default.html', to: 'features#default'
+  get '/features/',             to: 'features#default'
+  
+  # 'NetBest'
+  get '/features/netbest',              to: 'features#netbest'
+  get '/features/netbest/default.html', to: 'features#netbest'
 
   # DADMIN section ====================================================================================================
 

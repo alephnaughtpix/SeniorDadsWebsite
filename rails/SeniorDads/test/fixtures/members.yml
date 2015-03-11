@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  member_type_id: 
+  title: MyString
+  joined: 2015-03-11 14:14:48
+  join_reason: MyText
+  function: MyText
+  first_computer: MyString
+  any_other_comments: MyText
+  site_file_id: 
+
+two:
+  name: MyString
+  member_type_id: 
+  title: MyString
+  joined: 2015-03-11 14:14:48
+  join_reason: MyText
+  function: MyText
+  first_computer: MyString
+  any_other_comments: MyText
+  site_file_id: 

@@ -1,0 +1,18 @@
+- content_for :title do
+  s3N10r DaDz gRaPh1Kz!!!11!!1!
+- content_for :author do
+  Jackson Pollock of Senior Dads
+- content_for :description do
+  I am art- view me.
+- content_for :keywords do
+  art, drawings, digital, graphics, gfx, fiks, jackson, pollock, wacky, gallery, beep-beep!!!!
+- content_for :style_id, flush: true do
+  gfx
+- content_for :head do
+  %link{ :rel => "stylesheet", :type => "text/css", :href => "../css/slimbox/slimbox2.css"}<>
+  %script{ :language => "Javascript", :src => "../js/website/slimbox2.js"}<>
+- content_for :main do
+  .lastUpdated<>
+  = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "gF3ckx!!1", :sectionUrl => "."
+  = content_for?(:content) ? yield(:content) : yield
+= render :file => 'layouts/application'

@@ -1,0 +1,54 @@
+- content_for :title do
+  s3N10r D00dZ!!!!
+- content_for :author do
+  s3N10r dAdz!!11
+- content_for :description do
+  Well, you've been wowed by our amazing Falcon demos, I'm sure you'll want to know more about the members of our super-duper demo crew! So here are all the details!
+- content_for :keywords do
+  Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, dudes, members, Interview, Old, Fart, Doddering, Git, Dame, Vera, Lynn, Jackson, Pollock, Colostomy, Bag
+- content_for :style_id do
+  crew
+.lastUpdated<>
+=render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "d00Dz!!1!", :sectionUrl => "."
+%hr{ :width => "100%" }<>
+%div{ :align => "center" }<>
+  %p<>
+    %img(src="../images/sad3.gif" title="SENIOR DADS R WHO?" alt="SENIOR DADS R WHO?" height="275" width="546")<>
+  %hr<>
+    %h1<> Who on Earth are the funky beings in the demo crew known as SENIOR DADS??!?!
+%p<>
+  Well, you've been wowed by our amazing demos and website, I'm sure you'll want to know more about the members of our super-duper demo crew!
+  %strong<> So here are all the details!
+%table#dudes{ :border => 1 }<>
+  %tr<>
+    %td.header{ :colspan => 3 }<>
+      Senior Dads are...
+  - @members.each do |member|
+    %tr<>
+      %td.member{ :rowspan => 4 }<>
+        %img{ :src => "#{member.site_file.url}", :title => "#{member.title}!!!", :alt => "#{member.title}!!!" }<>
+        <br>#{member.title}
+      %td.question<>
+        %a{ :name => member.name }<>
+          Function in crew
+      %td.answer<>
+        #{member.function.html_safe}
+    %tr<>
+      %td.question<>
+        How did he join?
+      %td.answer<>
+        #{member.join_reason.html_safe}
+    %tr<>
+      %td.question<>
+        First computer
+      %td.answer<>
+        #{member.first_computer.html_safe}
+    %tr<>
+      %td.question<>
+        <B>Any other comments?</B><BR>
+      %td.answer<>
+        #{member.any_other_comments.html_safe}
+%p<>
+%hr<>
+%p<>
+.more{ :rel => "faq.html"}<>
