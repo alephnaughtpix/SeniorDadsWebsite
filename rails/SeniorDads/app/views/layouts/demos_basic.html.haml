@@ -6,6 +6,6 @@
   = content_for?(:style_id) ? yield(:style_id) : "demos"
 - content_for :main do
   .lastUpdated<>
-  = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
+  = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => (@is_root) ? "." : "default.html"
   = content_for?(:content) ? yield(:content) : yield
 = render :file => 'layouts/application'

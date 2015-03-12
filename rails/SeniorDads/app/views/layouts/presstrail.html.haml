@@ -1,0 +1,15 @@
+- content_for :title do
+  dA pR3sS tRa1L!!11!: #{yield :sub_title}
+- content_for :keywords do
+  publicity, press, print, online, magazines, #{yield :sub_keywords}
+- content_for :style_id, flush: true do
+  = content_for?(:style_id) ? yield(:style_id) : "presstrail"
+- content_for :main do
+  .lastUpdated<>
+  - unless (@is_root)
+    = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "pR3sS tRa1L!!11!", :sectionUrl => "default.html"
+  - else
+    #dox
+      = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "d0XX11!!1!", :sectionUrl => "../default.html"
+  = content_for?(:content) ? yield(:content) : yield
+= render :file => 'layouts/application'

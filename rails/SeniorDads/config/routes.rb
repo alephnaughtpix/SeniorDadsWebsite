@@ -17,13 +17,6 @@ Rails.application.routes.draw do
 
   resources :dudes
 
-#  get 'dudes/default'
-#  get 'dudes/faq'
-#  get 'demos/default'
-#  get 'demos/emu'
-#  get 'demos/pc'
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -80,6 +73,22 @@ Rails.application.routes.draw do
   # 'NetBest'
   get '/features/netbest',              to: 'features#netbest'
   get '/features/netbest/default.html', to: 'features#netbest'
+
+  # Sub features
+  scope :module => :features do
+
+    # 'Saggie'
+    get '/features/saggie',                       to: 'saggies#default'  # Main index
+    get '/features/saggie/default.html',          to: 'saggies#default'
+    get '/features/saggie/atuck.html',            to: 'saggies#atuck'    # Review of "Anal Tuck"
+    get '/features/saggie/colonic.html',          to: 'saggies#colonic'  # Review of "Colonic Irrigation"
+    get '/features/saggie/airdirt_maggie.html',   to: 'saggies#airdirt'  # Review of "Air Dirt"
+    get '/features/saggie/airdirt.html',          to: 'saggies#airdirt'
+    get '/features/saggie/airdirt_poom.html',     to: 'saggies#poom'     # "Air Dirt" "Poom" rumour
+    get '/features/saggie/poom.html',             to: 'saggies#poom'
+    get '/features/saggie/floormat.html',         to: 'saggies#floormat' # Review of "ST Floormat"
+
+  end
 
   # DADMIN section ====================================================================================================
 

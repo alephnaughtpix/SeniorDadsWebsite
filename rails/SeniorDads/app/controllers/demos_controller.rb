@@ -2,6 +2,8 @@ class DemosController < ApplicationController
 #  before_action :set_demo, only: [:show, :edit, :update, :destroy]
     layout "demos_prods", except: [ :default, :emu ]
 
+    @is_root = false
+
   # GET /demos
   # GET /demos.json
 #  def index
@@ -64,6 +66,7 @@ class DemosController < ApplicationController
 
 
     def default
+        @is_root = true
         render :layout => "demos_basic"
     end
 

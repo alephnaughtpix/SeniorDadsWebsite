@@ -1,0 +1,15 @@
+- content_for :title do
+  s3N10r Saggie!: #{yield :sub_title}
+- content_for :keywords do
+  Maggie, Diskmag, Saggie, #{yield :sub_keywords}
+- content_for :style_id, flush: true do
+  = content_for?(:style_id) ? yield(:style_id) : "saggie"
+- content_for :main do
+  .lastUpdated<>
+  - unless (@is_root)
+    = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "sAgG13!!!11!!", :sectionUrl => "default.html"
+  - else
+    #dox
+      = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "d0XX11!!1!", :sectionUrl => "../default.html"
+  = content_for?(:content) ? yield(:content) : yield
+= render :file => 'layouts/application'

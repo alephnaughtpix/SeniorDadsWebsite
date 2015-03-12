@@ -1,0 +1,2 @@
+module Features::PresstrailsHelper
+end
