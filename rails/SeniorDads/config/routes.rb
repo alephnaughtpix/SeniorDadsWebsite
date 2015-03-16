@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categories
+
   resources :members
 
   resources :member_types
@@ -88,6 +90,19 @@ Rails.application.routes.draw do
     get '/features/saggie/poom.html',             to: 'saggies#poom'
     get '/features/saggie/floormat.html',         to: 'saggies#floormat' # Review of "ST Floormat"
 
+    # 'Presstrail'
+    get '/features/presstrail',                   to: 'presstrails#default'  # Main index
+    get '/features/presstrail/default.html',      to: 'presstrails#default'
+    get '/features/presstrail/aph.html',          to: 'presstrails#aph'      # "Floormat" review
+    get '/features/presstrail/ac1.html',          to: 'presstrails#ac1'      # Website review
+    get '/features/presstrail/ac2.html',          to: 'presstrails#ac2'      # "Airdirt" review
+
+    # 'Killer Nut'
+    get '/features/knut',                         to: 'knuts#default'  # Main index
+    get '/features/knut/default.html',            to: 'knuts#default'
+    get '/features/knut/plot1.html',              to: 'knuts#plot1'    # Outline of episode 1
+    get '/features/knut/logo.html',               to: 'knuts#logo'     # "Logo" how-to
+  
   end
 
   # DADMIN section ====================================================================================================

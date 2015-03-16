@@ -1,0 +1,26 @@
+- content_for :sub_title do
+  Atari Computing on our website!
+- content_for :author do
+  Old Fart of the Senior Dads!
+- content_for :description do
+  Atari Computing on our website!
+- content_for :sub_keywords do
+  Atari, Computing, web, site, website
+- content_for :content do
+  .container<>
+    #ac.content<>
+      #intro.line<>
+        This great review of this website was published in the <strong>April 1997</strong> issue of #{render "features/presstrails/ac_title"}! Bear in mind that this review took place <em>before</em> we started upgrading various bits of our website!!
+      #main.line<>
+        #img.box<>
+          = render "features/presstrails/ac_logo"
+          %img{ :src => "/images/features/presstrail/ac1.gif", :width => "362", :height => "235" }<>
+        #text.box<>
+          %h1<> SENIOR DAD'S WORLD HQ
+          .mainText<>
+            %p<> The innovative and tongue-in-cheek Falcon demo programmers '<strong>Senior Dads</strong>' continue their alternative and unconventional approach to graphic design onto their web site. It's both wild and colourful and suits their image perfectly. The site uses good HTML technique and wasn't knocked up in an idle moment.
+            %p<> There are pages containing details of each group member, with their flattering nicknames such as '<strong><a href="../../crew/dudes.html#Doddering_Git">Doddering Git</A></strong>'. There's a download page from which you can hold of their most recent '<strong><a href="../../demos/airdirt.html">Air Dirt</A></strong>' demo and other productions. A must visit site for Atari demo enthusiasts.
+            %p<> Rating: <strong>70%</strong>
+            %p<> Jonathon Nott
+      #more.line<>
+        = render "partials/more", :href => "ac2.html"

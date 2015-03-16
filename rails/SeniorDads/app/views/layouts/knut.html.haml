@@ -1,15 +1,11 @@
 - content_for :title do
-  s3N10r Saggie!: #{yield :sub_title}
+  k1Ll3R nUt!!!11!: #{yield :sub_title}
 - content_for :keywords do
-  Maggie, Diskmag, Saggie, #{yield :sub_keywords}
+  killer, nut, story, netweb, #{yield :sub_keywords}
 - content_for :style_id, flush: true do
-  = content_for?(:style_id) ? yield(:style_id) : "saggie"
+  = content_for?(:style_id) ? yield(:style_id) : "knut"
 - content_for :main do
-  .lastUpdated<>
-  - unless (@is_root)
-    = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "sAgG13!!!11!!", :sectionUrl => "default.html"
-  - else
-    #dox
-      = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "d0XX11!!1!", :sectionUrl => "../default.html"
+  = render "partials/last_updated"
+  = render "partials/sub_header_sub_feature", :is_root => @is_root, :section_title => "[KILLER NUT!]"
   = content_for?(:content) ? yield(:content) : yield
 = render :file => 'layouts/application'

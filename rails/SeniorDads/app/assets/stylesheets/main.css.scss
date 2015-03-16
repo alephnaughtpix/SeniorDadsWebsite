@@ -3,20 +3,20 @@
 $mainTextCol: Yellow;
 
 @mixin linkCol($link, $visited, $hover, $active) {
-	a {
-		&:link {
-			color: $link;
-		}
-		&:visited {
-			color: $visited;
-		}
-		&:active {
-			color: $active;
-		}
-		&:hover {
-			color: $hover;
-		}
-	}
+  a {
+    &:link {
+      color: $link;
+    }
+    &:visited {
+      color: $visited;
+    }
+    &:active {
+      color: $active;
+    }
+    &:hover {
+      color: $hover;
+    }
+  }
 }
 
 @mixin position($x: 0px, $y: 0px) {
@@ -26,13 +26,13 @@ $mainTextCol: Yellow;
 }
 
 @mixin mainTextStyle {
-	color: $mainTextCol;
-	font: {
-		family : Times New Roman, Times, Garamond, serif;
-		size: 14px;
-		weight: normal;
-	}
-	@include linkCol( #77ff00, red, white, white );
+  color: $mainTextCol;
+  font: {
+    family : Times New Roman, Times, Garamond, serif;
+    size: 14px;
+    weight: normal;
+  }
+  @include linkCol( #77ff00, red, white, white );
 }
 
 @mixin preFormattedText {
@@ -42,39 +42,51 @@ $mainTextCol: Yellow;
   font-family: Courier, san-serif;
 }
 
+@mixin centreBox( $containerName : ".container", $contentBox : ".content" ) {
+  #{$containerName} {
+    width: 100%;
+    #{$contentBox} {
+      margin: {
+        left:  auto;
+        right: auto;
+      }
+    }
+  }
+}
+
 // Blink keyframes
 @-webkit-keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
 @keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
 
 body {
-	@include mainTextStyle;
-	background: {
-		color: #000077;
-		image: url(/images/sad_back.gif);
-		repeat: repeat;
-	}
-	.highlight {
-		color: white;
-	}
-	.blink {
-		animation: blinker 1s step-end infinite;
-		-webkit-animation: blinker 1s step-end infinite;
-	}
-	.formattedtext {
-		@extend .highlight;
-		white-space: pre ; 
-		display: block; 
-		unicode-bidi: embed;
-		font-family: Courier, san-serif;
-		margin: {
-			left: auto;
-			right: auto;
-		}
-	}
+  @include mainTextStyle;
+  background: {
+    color: #000077;
+    image: url(/images/sad_back.gif);
+    repeat: repeat;
+  }
+  .highlight {
+    color: white;
+  }
+  .blink {
+    animation: blinker 1s step-end infinite;
+    -webkit-animation: blinker 1s step-end infinite;
+  }
+  .formattedtext {
+    @extend .highlight;
+    white-space: pre ; 
+    display: block; 
+    unicode-bidi: embed;
+    font-family: Courier, san-serif;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
 
-	&#crew {
-		background-image: url(../images/sad_bak2.gif);
-	}
+  &#crew {
+    background-image: url(../images/sad_bak2.gif);
+  }
 
     &#demos {
       .highlight {
@@ -206,20 +218,20 @@ body {
       }
 
     }
-	&#monomental {
-		color: white;
-		background: {
-			color: black;
-			image: url(../images/demos/mono/sad_back.gif);
-		} 
-		@include linkCol( #AAAAAA, #999999, #FFFFFF, #FFFFFF );
-	}
-	&#gfx {
-		background-image: url(../images/sad_back3.jpg);
-	}
-	&#features {
-		background-image: url(../images/features/feat_back.jpg);
-	}
+  &#monomental {
+    color: white;
+    background: {
+      color: black;
+      image: url(../images/demos/mono/sad_back.gif);
+    } 
+    @include linkCol( #AAAAAA, #999999, #FFFFFF, #FFFFFF );
+  }
+  &#gfx {
+    background-image: url(../images/sad_back3.jpg);
+  }
+  &#features {
+    background-image: url(../images/features/feat_back.jpg);
+  }
   &#knut {
     font: {
       face: Comic Sans MS, sans-serif;
@@ -231,19 +243,19 @@ body {
     } 
     @include linkCol( #FFFF00, #FFFF80, #00FF40, white );
   }
-	&#netbest {
-		color: white;
-		background: {
-			color: black;
-			image: url(../images/features/netbest/netbest_back.jpg);
-		} 
-		@include linkCol( #00ffff, #ff80ff, #ffff80, white );
-	}
+  &#netbest {
+    color: white;
+    background: {
+      color: black;
+      image: url(../images/features/netbest/netbest_back.jpg);
+    } 
+    @include linkCol( #00ffff, #ff80ff, #ffff80, white );
+  }
   &#presstrail {
     color: black;
     background: {
       color: #FFFFC0;
-      image: url(../images/features/presstrail/ptrail_bkg.gif);
+      image: url(/images/features/presstrail/ptrail_bkg.gif);
     } 
     @include linkCol( #0000FF, #800080, #FF00FF, white );
   }
@@ -473,7 +485,7 @@ table#dudes{
 }
 
 #SDTextTitle {
-	width: 35%;
+  width: 35%;
 }
 
 #SDFaq {
@@ -636,5 +648,139 @@ table#dudes{
 #saggie {
   .highlight {
     font-style: italic;
+  }
+}
+
+#presstrail {
+  h1, h2, #AtariExplorerOnline .title {
+    font: {
+      size: xx-large;
+      family: Impact, Verdana, Arial Black, sans-serif;
+      weight: bold;
+    }
+  }
+  h2 {
+    font: {
+      size: x-large;
+      style: italic;
+    }
+  }
+
+  @include centreBox();
+  .container {
+    .content {
+      width: 75%;
+      .line {
+        clear: both;
+        margin-bottom: 10px;
+        .box {
+          width: 45%;
+          float: left;
+          padding: 5px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+      #WhereRead, #Saggie, #AtariComputing, #AtariExplorerOnline {
+        font-family: Arial Black, sans-serif;
+      }
+      #WhereRead {
+        background-color: #ffffff;
+      }
+      #Saggie {
+        background-color: #ccccff;
+      }
+      #AtariComputing {
+        background-color: #ccffee;
+      }
+      #AtariExplorerOnline {
+        background-color: #000099;
+        img {
+          float:left;
+        }
+        .innerBox {
+          margin-left: 125px;
+          padding: 5px;
+          background-color: #ffffcc;
+        }
+        font-size: normal;
+      }
+
+      #introText {
+        background-color: #ffffff;
+        padding: 5px;
+        .signOff {
+          padding-left: 10px;
+          font: {
+            weight: bold;
+            style: italic;
+          }
+        }
+      }
+    }
+    #intro, #text {
+      background-color: #ffffff;
+      padding: 5px;
+    }
+    #text .mainText {
+      p:first-child:first-letter {
+        font-size: 3.26em;
+        margin: 0 0.153em 0 0;
+        float: left;
+        line-height: 0.82;
+        font-weight: bold;
+      }
+    }
+    #aph {
+      #main {  
+        #img {
+          background-color: #000099;
+          width: 200px;
+          text-align: center;
+        }
+      }
+      #text .mainText {
+        width: 50%;
+        p:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+    #more {
+      background-color: #000080;
+    }
+  }
+  
+  #knut {
+    .mainText, .miniText {
+      color: #99ff99;
+      strong, b, h3, h2 {
+        color: #dbffa4;
+      }
+    }
+    
+    .miniText {
+      font-size: smaller;
+    }
+    
+    #LogoIntro {
+      img {
+        margin-right: 5px;
+        float: left;
+      }
+    }
+    
+    #LogoSteps {
+      .image {
+        text-align: center;
+      }
+      .info {
+        text-align: left;
+        h4::first-line {
+          color: #dcffa4;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }

@@ -12,7 +12,7 @@
   %link{ :rel => "stylesheet", :type => "text/css", :href => "../css/slimbox/slimbox2.css"}<>
   %script{ :language => "Javascript", :src => "../js/website/slimbox2.js"}<>
 - content_for :main do
-  .lastUpdated<>
+  = render "partials/last_updated"
   = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "gF3ckx!!1", :sectionUrl => "."
   = content_for?(:content) ? yield(:content) : yield
 = render :file => 'layouts/application'

@@ -1,0 +1,43 @@
+- content_for :sub_title do
+  Tha SD in Tha Meeja!!
+- content_for :author do
+  Dame Vera Lynn of the Senior Dads
+- content_for :description do
+  SENIOR SCOOPS are da ordah of thee day, man! Check out the kool reviews we got from various mags, both in da print and da disk formatz!
+- content_for :sub_keywords do
+  Dame, VL, in, da, haaas
+- content_for :content do
+  .container<>
+    .content<>
+      .line<>
+        .box<>
+          %img{ :src => "/images/features/presstrail/ptrail_main.gif", :alt => "pR3sS tRa1L!!11!", :title => "pR3sS tRa1L!!11!", :height => "200", :width => "320" }<>
+        #introText.box<>
+          %img{ :src => "/images/features/presstrail/pt_what.gif", :alt => "wHaT iZ dA k3Wl //pR3sS tRa1L?!?!21?!1?2?//", :title => "wHaT iZ dA k3Wl //pR3sS tRa1L?!?!21?!1?2?//", :height => "72", :width => "320" }<>
+          %h1<> CHECK IT OUT Y'ALL!
+          %p<> <B>SENIOR SCOOPS</B> are da ordah of thee day, man! Check out the kool reviews we got from various mags, both in da print and da disk formatz! One mega source is <B>MAGGIE</B> diskmag, but we already <a href="../saggie/default.html">gotsa section for dat</A>! Here are da otherz! Check it aahhhtt!
+          %p.signOff<> Dame VL
+      .line<>
+        #WhereRead.box<>
+          %img{ :src => "/images/features/presstrail/pt_where.gif", :alt => "Where hav U read us?" , :title => "Where hav U read us?", :height => "140", :width => "286" }<>
+          %h2<> U read us in:
+        #Saggie.box<>
+          %a{ :href => "../saggie/default.html" }
+            %img{ :src => "/images/features/saggie/saggie.gif", :alt => "sAgG13!!!11!!", :title => "sAgG13!!!11!!", :height => "110", :width => "150", :align => "left" }<>
+            %h1<> <a href="../saggie/default.html">Maggie diskmag</a>
+            %ul<>
+              %li<> Check out our <a href="../saggie/default.html">dedicated section</a> for more details!
+      .line<>
+        #AtariComputing.box<>
+          = render "features/presstrails/ac_logo"
+          %h2<> 
+            = render "features/presstrails/ac_title"
+          %ul<>
+            %li<> <a href="ac1.html">Our website gets 70%!</a>
+            %li<> <a href="ac2.html">"Airdirt"gets 75%!</A>
+        #AtariExplorerOnline.box<>
+          %img{ :src => "../../images/features/presstrail/frted.gif", :width => "120" }<>
+          .innerBox<>
+            %p<> <span class="title">The Unabashed AtariPhile!</span><br/>by Michael Burkley
+            %ul<> 
+              %li<> <em><a href="aph.html">Mike Gives "Floormat" a really fair review!</a></em>
