@@ -15,7 +15,9 @@
       %tr
         %td= category.name
         %td= category.title
-        %td= category.parent_category_id
+        %td
+          - unless category.parent_category_id.nil?
+            = Category.where( id: category.parent_category_id ).first.title
         %td= link_to 'Show', category
         %td= link_to 'Edit', edit_category_path(category)
         %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }

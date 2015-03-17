@@ -1,0 +1,23 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @link.name
+%p
+  %b Title:
+  = @link.title
+%p
+  %b Url:
+  = @link.url
+%p
+  %b Description:
+  = @link.description
+%p
+  %b Category:
+  = @link.category
+  - unless @link.category.nil?
+    = Link.where( id: @link.category_id ).first.title
+
+= link_to 'Edit', edit_link_path(@link)
+\|
+= link_to 'Back', links_path

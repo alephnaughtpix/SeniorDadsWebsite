@@ -1,0 +1,4 @@
+- if user_signed_in?
+  .dadminWidget<> 
+    #{current_user.email} logged into <a href="/dadmin/">Dadmin</a>
+    = button_to 'Logout', destroy_user_session_path, :method => :delete

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :categories
+
+  resources :links
 
   resources :members
 
@@ -10,8 +11,6 @@ Rails.application.routes.draw do
   resources :galleries
 
   resources :site_files
-
-  resources :site_file_types
 
   resources :pictures
 
@@ -107,8 +106,27 @@ Rails.application.routes.draw do
 
   # DADMIN section ====================================================================================================
 
+  # Authentication
+  Rails.application.routes.draw do
+  resources :links
+
+    devise_for :users, controllers: {
+      sessions: 'users/sessions'
+    }
+  end
+  
+  get '/dadmin/',              to: 'dadmins#index'
+
+
   # Basic site file types...
   resources :site_file_types
+  
+  # Categories
+  resources :categories
+
+  
+  # Categories
+  resources :links
 
   # ===================================================================================================================
 
