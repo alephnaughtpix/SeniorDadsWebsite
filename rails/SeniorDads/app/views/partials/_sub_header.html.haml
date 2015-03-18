@@ -1,7 +1,11 @@
 #subHeaderWrapper<>
   #subHeader
-    #sd{    :class => "link", :title => "s33N10r",    :rel => rootUrl }<>
+    #sd<>
+      %a{ :href => "/" }<>
+        %img{ :src => "/images/blank.gif", :alt => "s33N10r", :title => "s33N10r" }<>
     - unless (sectionUrl == ".")
-      #title{ :class => "link", :title => sectionTitle, :rel => sectionUrl }<>
+      #title<>
+        %a{ :href => sectionUrl }<>
+          %img{ :src => "/images/blank.gif", :alt => sectionTitle, :title => sectionTitle }<>
     - else
       #title{ :title => sectionTitle }<>

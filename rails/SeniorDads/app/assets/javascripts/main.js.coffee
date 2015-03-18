@@ -1,8 +1,13 @@
 # s3N10r sZcR1pTzC!!!!!1!1!!
 htmlWordMatch = /(<\/?\w+(?:(?:\s+\w+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>)/gim
 
+monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 # Append "Last updated" and date to element
-appendLastModeDate = (element, date) -> element.append 'Last updated: ' + date
+appendLastModeDate = (element, date) -> 
+  d = new Date(date)
+  pageDate = d.getDate() + " " + monthNames[d.getMonth()] + " " + d.getFullYear()
+  element.append 'Last updated: ' + pageDate
 
 # Last modified date for URL
 getlastmod = (url, dateFunction, element) ->
@@ -94,7 +99,7 @@ $(document).ready ->
   # Old school blinking!
   $('.blink').modernBlink()
   # Set last updated for page.
-  appendLastModeDate($('.lastUpdated'),document.lastModified)
+  appendLastModeDate($('.lastUpdated:empty'),document.lastModified)
   # Set last updated for URL.
   $('.urlLastUpdated').each -> getlastmod(element.attr("rel"), appendLastModeDate, $(this))
 

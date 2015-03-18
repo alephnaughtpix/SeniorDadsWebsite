@@ -1,5 +1,6 @@
 class LinksController < DadminsController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
+  belongs_to :category
 
   respond_to :html
 

@@ -42,10 +42,11 @@ $mainTextCol: Yellow;
   font-family: Courier, san-serif;
 }
 
-@mixin centreBox( $containerName : ".container", $contentBox : ".content" ) {
+@mixin centreBox( $containerName : ".container", $contentBox : ".content", $width : 75% ) {
   #{$containerName} {
     width: 100%;
     #{$contentBox} {
+      width: $width;
       margin: {
         left:  auto;
         right: auto;
@@ -57,6 +58,8 @@ $mainTextCol: Yellow;
 // Blink keyframes
 @-webkit-keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
 @keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
+
+@include centreBox();
 
 body {
   @include mainTextStyle;
@@ -332,6 +335,11 @@ body {
       #MonoMental & {
         background-image: url(../images/demos/mono/sd_small.gif);
       }
+      img {
+        @include position(0px, 0px);
+        width: 80px;
+        height: 107px;
+      }
     }
     #title {
       width: 350px;
@@ -340,6 +348,11 @@ body {
       background: {
         repeat: no-repeat;
         position: center;
+      }
+      img {
+        @include position(80px, 0px);
+        width: 350px;
+        height: 150px;
       }
       #crew & {
         background-image: url(../images/dudes.gif);
@@ -382,30 +395,29 @@ body {
 }
 
 #features{
+  @include centreBox('#doxListContainer', '#doxList');
   #doxListContainer {
-    width: 100%;
     display: block;
     #doxList {
       width: 60%;
-      margin: {
-        left: auto;
-        right: auto;
-      }
       .item {
+        clear: both;
         .logo, .text {
-          width: 50%;
           margin: {
             right: 10px;
             bottom: 10px;
           }
-          .logo {
-            text-align: center;
-          }
-          .text {
-            font: {
-              size: x-large;
-              weight: bold;
-            }
+        }
+        .logo {
+          text-align: center;
+          width: 330px;
+          margin-right: 10px;
+          float: left;
+        }
+        .text {
+          font: {
+            size: x-large;
+            weight: bold;
           }
         }
       }
@@ -626,19 +638,23 @@ table#dudes{
     list-style: none;
     li {
       background: {
-        image: url(../images/disk.gif);
+        image: url(/images/features/netbest/netbest_mini.gif);
         position: top left;
         repeat: no-repeat;
       }
       padding-left: 80px;
       padding-bottom: 15px;
+      min-height: 100px;
     }
     .title {
-      font-weight: bold;
-      width: 50%;
+      font: {
+        size: larger;
+        weight: bold;
+      }
+      //width: 50%;
       height: 100%;
       display: block;
-      float: left;
+      //float: left;
     }
     .info {
     }

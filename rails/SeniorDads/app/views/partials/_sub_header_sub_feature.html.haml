@@ -1,5 +1,5 @@
 - unless (is_root)
-  = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => section_title, :sectionUrl => "default.html"
+  = render "partials/sub_header", :rootUrl => "/", :sectionTitle => section_title, :sectionUrl => "default.html"
 - else
   #dox
-    = render "partials/sub_header", :rootUrl => "../../default.html", :sectionTitle => "d0XX11!!1!", :sectionUrl => "../default.html"
+    = render "partials/sub_header", :rootUrl => "/", :sectionTitle => "d0XX11!!1!", :sectionUrl => "/features/"

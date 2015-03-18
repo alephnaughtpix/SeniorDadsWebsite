@@ -1,5 +1,6 @@
 class CategoriesController < DadminsController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  has_many :links
 
   # GET /categories
   # GET /categories.json

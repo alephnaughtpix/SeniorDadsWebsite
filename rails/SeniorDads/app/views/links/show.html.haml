@@ -14,9 +14,8 @@
   = @link.description
 %p
   %b Category:
-  = @link.category
   - unless @link.category.nil?
-    = Link.where( id: @link.category_id ).first.title
+    = Category.where( id: @link.category_id ).first.title
 
 = link_to 'Edit', edit_link_path(@link)
 \|

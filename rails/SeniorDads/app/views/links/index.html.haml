@@ -3,7 +3,6 @@
 %table
   %thead
     %tr
-      %th Name
       %th Title
       %th Url
       %th Description
@@ -15,11 +14,10 @@
   %tbody
     - @links.each do |link|
       %tr
-        %td= link.name
         %td= link.title
         %td= link.url
         %td= link.description
-        %td= link.category
+        %td= link.category.title
         %td= link_to 'Show', link
         %td= link_to 'Edit', edit_link_path(link)
         %td= link_to 'Destroy', link, :method => :delete, :data => { :confirm => 'Are you sure?' }

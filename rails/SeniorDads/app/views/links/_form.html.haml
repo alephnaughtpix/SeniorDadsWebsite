@@ -20,6 +20,6 @@
     = f.text_area :description
   .field
     = f.label :category
-    = f.collection_select(:category, Category.all, :id, :title)
+    = f.collection_select(:category_id, Category.all, :id, :title)
   .actions
     = f.submit 'Save'
