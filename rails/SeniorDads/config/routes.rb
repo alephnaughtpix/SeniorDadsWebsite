@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :links
-
   resources :members
 
   resources :member_types
@@ -108,7 +106,6 @@ Rails.application.routes.draw do
 
   # Authentication
   Rails.application.routes.draw do
-  resources :links
 
     devise_for :users, controllers: {
       sessions: 'users/sessions'
@@ -123,9 +120,9 @@ Rails.application.routes.draw do
   
   # Categories
   resources :categories
-
   
-  # Categories
+  # Links
+  get '/links/category/:id',   to: 'links#category'
   resources :links
 
   # ===================================================================================================================

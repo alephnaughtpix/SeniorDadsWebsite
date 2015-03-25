@@ -1,11 +1,13 @@
-%h1 Listing links
+%h1 Listing links for Category "#{@category.title}"
+
+%p<>
+  = @breadcrumb.html_safe 
 
 %table
   %thead
     %tr
       %th Title
       %th Description
-      %th Category
       %th
       %th
       %th
@@ -15,7 +17,6 @@
       %tr
         %td= link.title
         %td= link.description
-        %td= link_to link.category.title, :controller => "links", :action => :category, :id => link.category.id
         %td= link_to 'Show', link
         %td= link_to 'Edit', edit_link_path(link)
         %td= link_to 'Destroy', link, :method => :delete, :data => { :confirm => 'Are you sure?' }

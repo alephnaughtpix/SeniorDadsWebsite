@@ -1,11 +1,17 @@
 class LinksController < DadminsController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
-  belongs_to :category
 
   respond_to :html
 
   def index
     @links = Link.all
+    respond_with(@links)
+  end
+  
+  def category
+    @links = Link.where( "category_id" => params[:id]  )
+    @category = Category.find(params[:id])
+    @breadcrumb = breadcrumbs( @category.id )
     respond_with(@links)
   end
 
@@ -45,4 +51,18 @@ class LinksController < DadminsController
     def link_params
       params.require(:link).permit(:name, :title, :url, :description, :category_id)
     end
+    
+    def breadcrumbs( category_id )
+      crumbtrail = ""
+      category_list = []
+      current_category = Category.find(category_id)
+      category_list.push( current_category.title )
+      while (!current_category.parent_category_id.nil?)
+        current_category = Category.find(current_category.parent_category_id)
+        category_list.push( "<a href=\"/links/category/#{current_category.id}\">#{current_category.title}</a>")
+      end
+      crumbtrail = category_list.join(' &gt; ')
+      crumbtrail
+    end
+    
 end
