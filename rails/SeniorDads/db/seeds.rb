@@ -27,13 +27,13 @@ Demo.create([
         size: 60,
         release_date: "1995-04-16 18:55:00",
         demo_order: 1,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'Anal Tuck',
             url: '/filez/demos/analtuck.lzh',
             description: 'Local copy.',
             site_file_type: bin
         ),
-        site_files: SiteFile.create([
+        mirrors: SiteFile.create([
             {
                 name: 'Anal Tuck',
                 url: 'ftp://ftp.funet.fi/pub/atari/falcon/demo/analtuck.lzh',
@@ -56,7 +56,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'atuck',
             title: '"Anal Tuck" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'atuck1',
                     url: '/images/demos/atuck.gif',
@@ -74,13 +74,13 @@ Demo.create([
         size: 63,
         release_date: "1995-08-09 04:19:00",
         demo_order: 2,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'Colonic Irrigation',
             url: '/filez/demos/senior.lzh',
             description: 'Local copy.',
             site_file_type: bin
         ),
-        site_files: SiteFile.create([
+        mirrors: SiteFile.create([
             {
                 name: 'Colonic Irrigation',
                 url: 'ftp://ftp.funet.fi/pub/atari/falcon/demo/senior.lzh',
@@ -103,7 +103,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'colonic',
             title: '"Colonic Irrigation" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'colonic1',
                     url: '/images/demos/colonic.gif',
@@ -121,13 +121,13 @@ Demo.create([
         size: 642,
         release_date: "1996-03-01 01:18:00",
         demo_order: 3,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'L\' Aube Du Matin Du Soir II (Remix)',
             url: '/filez/demos/ladmds2.lzh',
             description: 'Local copy.',
             site_file_type: bin
         ),
-        site_files: SiteFile.create([
+        mirrors: SiteFile.create([
             {
                 name: 'L\' Aube Du Matin Du Soir II (Remix)',
                 url: 'ftp://ftp.funet.fi/pub/atari/falcon/demo/ladmds2.lzh',
@@ -150,7 +150,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'ladmds2',
             title: '"L\' Aube Du Matin Du Soir II (Remix)" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'ladmds2_1',
                     url: '/images/demos/ladmds2.gif',
@@ -168,13 +168,13 @@ Demo.create([
         size: 328,
         release_date: "1996-10-31 15:49:00",
         demo_order: 4,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'The Airdirt Demo',
             url: '/filez/demos/air_dirt.lzh',
             description: 'Local copy.',
             site_file_type: bin
         ),
-        site_files: SiteFile.create([
+        mirrors: SiteFile.create([
             {
                 name: 'The Airdirt Demo',
                 url: 'ftp://ftp.funet.fi/pub/atari/falcon/demo/air_dirt.lzh',
@@ -197,7 +197,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'airdirt',
             title: '"The Airdirt Demo" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'airdirt1',
                     url: '/images/demos/airdirt.jpg',
@@ -215,13 +215,13 @@ Demo.create([
         size: 34,
         release_date: '1997-02-24 13:14:00',
         demo_order: 5,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'The ST Floormat Demo',
             url: '/filez/demos/stflrmat.zip',
             description: 'Local copy.',
             site_file_type: bin
         ),
-        site_files: SiteFile.create([
+        mirrors: SiteFile.create([
             {
                 name: 'The ST Floormat Demo',
                 url: 'ftp://ftp.funet.fi/pub/atari/demo/stflrmat.zip',
@@ -238,7 +238,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'floormat',
             title: '"The ST Floormat Demo" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'floormat1',
                     url: '/images/demos/floormat.gif',
@@ -256,13 +256,13 @@ Demo.create([
         size: 47,
         release_date: '1997-05-05 16:40:00',
         demo_order: 6,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'The "Anti Teckno" Teckno Demo',
             url: '/filez/demos/teckno.zip',
             description: 'Local copy.',
             site_file_type: bin
         ),
-        site_files: SiteFile.create([
+        mirrors: SiteFile.create([
             {
                 name: 'The "Anti Teckno" Teckno Demo',
                 url: 'ftp://ftp.funet.fi/pub/atari/demo/teckno.lzh',
@@ -279,7 +279,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'teckno',
             title: '"The \'Anti Teckno\' Teckno Demo" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'teckno1',
                     url: '/images/demos/teckno.gif',
@@ -297,7 +297,7 @@ Demo.create([
         size: 488,
         release_date: '1997-12-24 12:41:00',
         demo_order: 7,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'The "Anti Teckno" Teckno Demo',
             url: '/filez/demos/xmas97.zip',
             description: 'Local copy.',
@@ -306,7 +306,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'xmas97',
             title: '"Xmas Card 97" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'xmas97_1',
                     url: '/images/demos/xmas97.jpg',
@@ -324,7 +324,7 @@ Demo.create([
         size: 0.125,
         release_date: '1998-01-20 00:21:58',
         demo_order: 8,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'DadPlazz!',
             url: '/filez/demos/dadplazz.zip',
             description: 'Local copy.',
@@ -333,7 +333,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'dadplazz',
             title: '"DadPlazz!" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'dadplazz1',
                     url: '/images/demos/dadplazz.png',
@@ -351,7 +351,7 @@ Demo.create([
         size: 112,
         release_date: '1998-04-05 22:30:00',
         demo_order: 9,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'Mono-Mental!',
             url: '/filez/demos/monomntl.zip',
             description: 'Local copy.',
@@ -360,7 +360,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'mono',
             title: '"Mono-Mental!" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'mono1',
                     url: '/images/demos/mono/testcard.gif',
@@ -378,7 +378,7 @@ Demo.create([
         size: 15,
         release_date: '1998-04-05 22:30:00',
         demo_order: 10,
-        site_file: SiteFile.create(
+        main_file: SiteFile.create(
             name: 'The Ultimate Fake Demo',
             url: '/filez/demos/fake.zip',
             description: 'Local copy.',
@@ -387,7 +387,7 @@ Demo.create([
         gallery: Gallery.create(
             name: 'fake',
             title: '"The Ultimate Fake Demo" Gallery',
-            site_files: SiteFile.create([
+            pictures: SiteFile.create([
                 {
                     name: 'fake1',
                     url: '/images/demos/fake.gif',
@@ -403,7 +403,7 @@ Demo.create([
 Gallery.create(
     name:        'JPG' ,
     title:       'Jackson Pollock\'s Gallery'
-).site_files = SiteFile.create([
+).pictures = SiteFile.create([
     { name: 'sd_presents',
       url: '/images/demos/presents.gif',
       description: 'The way we start our demos.',
@@ -631,56 +631,3 @@ link_11 = Link.create("name"=>"cruel_site", "title"=>"Cruel Site of the Day", "u
 link_12 = Link.create("name"=>"grampian_transport", "title"=>"Grampian Transport Museum", "url"=>"http://www.cw.globalweb.co.uk/alford/gtm.htm", "description"=>"Wow! Who knew transport in the north of Scotland could be so interesting!!!! Also, check out the radical design of this site, which uses color opposites to make the text easier on the eyes!", "category_id"=>2)
 link_13 = Link.create("name"=>"tocs", "title"=>"T.O.C.S", "url"=>"http://dspace.dial.pipex.com/town/plaza/lh48/", "description"=>"No wonder this company is &quot;well established&quot;! Wait till you see the quality of their site!!!", "category_id"=>2)
 link_14 = Link.create("name"=>"calico_links", "title"=>"Links page on Calico", "url"=>"http://www.cali.co.uk/links/", "description"=>"Some wisdom from the professionals. These guys design web pages for a living. Check out how their brilliance!!!", "category_id"=>2)
-link_14 = Link.create(name: "AnalTuck", title: "Anal Tuck", description: "Local copy.", url: "/filez/demos/analtuck.lzh", "category_id" => 4)
-link_15 = Link.create(name: "AnalTuck1", title: "Anal Tuck", description: "Mirror 1.", url: "ftp://ftp.funet.fi/pub/atari/falcon/demo/analtuck.lzh", "category_id" => 4)
-link_16 = Link.create(name: "AnalTuck2", title: "Anal Tuck", description: "Mirror 2.", url: "ftp://sunsite.doc.ic.ac.uk/computing/systems/atari/umich/Falcon/Demos/analtuck.lzh", "category_id" => 4)
-link_17 = Link.create(name: "AnalTuck3", title: "Anal Tuck", description: "Mirror 3.", url: "ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/96kdemos/ANALTUCK.LZH", "category_id" => 4)
-link_18 = Link.create(name: "Atuck1", title: "atuck1", description: "A legend is born!!!!", url: "/images/demos/atuck.gif", "category_id" => 5)
-link_19 = Link.create(name: "ColonicIrrigation", title: "Colonic Irrigation", description: "Local copy.", url: "/filez/demos/senior.lzh", "category_id" => 4)
-link_20 = Link.create(name: "ColonicIrrigation1", title: "Colonic Irrigation", description: "Mirror 1.", url: "ftp://ftp.funet.fi/pub/atari/falcon/demo/senior.lzh", "category_id" => 4)
-link_21 = Link.create(name: "ColonicIrrigation2", title: "Colonic Irrigation", description: "Mirror 2.", url: "ftp://sunsite.doc.ic.ac.uk/computing/systems/atari/umich/Falcon/Demos/senior.lzh", "category_id" => 4)
-link_22 = Link.create(name: "ColonicIrrigation3", title: "Colonic Irrigation", description: "Mirror 3.", url: "ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/senior.lzh", "category_id" => 4)
-link_23 = Link.create(name: "Colonic1", title: "colonic1", description: "Back with a splash!!(!!)", url: "/images/demos/colonic.gif", "category_id" => 5)
-link_24 = Link.create(name: "LAubeDuMatinDuSoirIIRemix", title: "L' Aube Du Matin Du Soir II (Remix)", description: "Local copy.", url: "/filez/demos/ladmds2.lzh", "category_id" => 4)
-link_25 = Link.create(name: "LAubeDuMatinDuSoirIIRemix1", title: "L' Aube Du Matin Du Soir II (Remix)", description: "Mirror 1.", url: "ftp://ftp.funet.fi/pub/atari/falcon/demo/ladmds2.lzh", "category_id" => 4)
-link_26 = Link.create(name: "LAubeDuMatinDuSoirIIRemix2", title: "L' Aube Du Matin Du Soir II (Remix)", description: "Mirror 2.", url: "ftp://ftp.ibp.fr/pub/atari/Demos/ladmds2.lzh", "category_id" => 4)
-link_27 = Link.create(name: "LAubeDuMatinDuSoirIIRemix3", title: "L' Aube Du Matin Du Soir II (Remix)", description: "Mirror 3.", url: "ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/ladmds2.lzh", "category_id" => 4)
-link_28 = Link.create(name: "Ladmds21", title: "ladmds2_1", description: "Our first big one!!(!!)", url: "/images/demos/ladmds2.gif", "category_id" => 5)
-link_29 = Link.create(name: "AirdirtDemo", title: "The Airdirt Demo", description: "Local copy.", url: "/filez/demos/air_dirt.lzh", "category_id" => 4)
-link_30 = Link.create(name: "AirdirtDemo1", title: "The Airdirt Demo", description: "Mirror 1.", url: "ftp://ftp.funet.fi/pub/atari/falcon/demo/air_dirt.lzh", "category_id" => 4)
-link_31 = Link.create(name: "AirdirtDemo2", title: "The Airdirt Demo", description: "Mirror 2.", url: "ftp://ftp.ibp.fr/pub/atari/Falcon/Demos/air_dirt.lzh", "category_id" => 4)
-link_32 = Link.create(name: "AirdirtDemo3", title: "The Airdirt Demo", description: "Mirror 3.", url: "ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/air_dirt.lzh", "category_id" => 4)
-link_33 = Link.create(name: "Airdirt1", title: "airdirt1", description: "The screen that launched a new era in Atari demoes!!!!", url: "/images/demos/airdirt.jpg", "category_id" => 5)
-link_34 = Link.create(name: "STFloormatDemo", title: "The ST Floormat Demo", description: "Local copy.", url: "/filez/demos/stflrmat.zip", "category_id" => 4)
-link_35 = Link.create(name: "STFloormatDemo1", title: "The ST Floormat Demo", description: "Mirror 1.", url: "ftp://ftp.funet.fi/pub/atari/demo/stflrmat.zip", "category_id" => 4)
-link_36 = Link.create(name: "STFloormatDemo2", title: "The ST Floormat Demo", description: "Mirror 2.", url: "ftp://ftp.ibp.fr/pub/atari/Demos/stflrmat.zip", "category_id" => 4)
-link_37 = Link.create(name: "Floormat1", title: "floormat1", description: "This is what happens when inferior coders ripp you off!!!!", url: "/images/demos/floormat.gif", "category_id" => 5)
-link_38 = Link.create(name: "AntiTecknoTecknoDemo", title: "The \"Anti Teckno\" Teckno Demo", description: "Local copy.", url: "/filez/demos/teckno.zip", "category_id" => 4)
-link_39 = Link.create(name: "AntiTecknoTecknoDemo1", title: "The \"Anti Teckno\" Teckno Demo", description: "Mirror 1.", url: "ftp://ftp.funet.fi/pub/atari/demo/teckno.lzh", "category_id" => 4)
-link_40 = Link.create(name: "AntiTecknoTecknoDemo2", title: "The \"Anti Teckno\" Teckno Demo", description: "Mirror 2.", url: "ftp://ftp.ibp.fr/pub/atari/Demos/tekno.lzh", "category_id" => 4)
-link_41 = Link.create(name: "Teckno1", title: "teckno1", description: "HARDCORE YOU KNOW THA SCORE!!!!", url: "/images/demos/teckno.gif", "category_id" => 5)
-link_42 = Link.create(name: "AntiTecknoTecknoDemo3", title: "The \"Anti Teckno\" Teckno Demo", description: "Local copy.", url: "/filez/demos/xmas97.zip", "category_id" => 4)
-link_43 = Link.create(name: "Xmas971", title: "xmas97_1", description: "Merrey Xmas, everyboddy!!!!", url: "/images/demos/xmas97.jpg", "category_id" => 5)
-link_44 = Link.create(name: "DadPlazz", title: "DadPlazz!", description: "Local copy.", url: "/filez/demos/dadplazz.zip", "category_id" => 4)
-link_45 = Link.create(name: "Dadplazz1", title: "dadplazz1", description: "Can you believe this was done in 128 bytes?!?!?", url: "/images/demos/dadplazz.png", "category_id" => 5)
-link_46 = Link.create(name: "MonoMental", title: "Mono-Mental!", description: "Local copy.", url: "/filez/demos/monomntl.zip", "category_id" => 4)
-link_47 = Link.create(name: "Mono1", title: "mono1", description: "Back to mono!!!!", url: "/images/demos/mono/testcard.gif", "category_id" => 5)
-link_48 = Link.create(name: "UltimateFakeDemo", title: "The Ultimate Fake Demo", description: "Local copy.", url: "/filez/demos/fake.zip", "category_id" => 4)
-link_49 = Link.create(name: "Fake1", title: "fake1", description: "Our first FAKE demo!!!", url: "/images/demos/fake.gif", "category_id" => 5)
-link_50 = Link.create(name: "Sdpresents", title: "sd_presents", description: "The way we start our demos.", url: "/images/demos/presents.gif", "category_id" => 5)
-link_51 = Link.create(name: "Ladmds2", title: "ladmds2", description: "An abstract title page.", url: "/images/demos/ladmds2.gif", "category_id" => 5)
-link_52 = Link.create(name: "Airdirt11", title: "airdirt1", description: "An impressionistic demo intro page.", url: "/images/demos/airdirt.jpg", "category_id" => 5)
-link_53 = Link.create(name: "OldFart", title: "OldFart", description: "A portrait created for the Air Dirt Demo.", url: "/images/oldfart.jpg", "category_id" => 5)
-link_54 = Link.create(name: "DodderingGit", title: "DodderingGit", description: "A portrait created for the Air Dirt Demo.", url: "/images/dodgit.jpg", "category_id" => 5)
-link_55 = Link.create(name: "DameVeraLynn", title: "DameVeraLynn", description: "A portrait created for the Air Dirt Demo.", url: "/images/damevera.jpg", "category_id" => 5)
-link_56 = Link.create(name: "JacksonPollock", title: "JacksonPollock", description: "A portrait created for the Air Dirt Demo.", url: "/images/jpollock.jpg", "category_id" => 5)
-link_57 = Link.create(name: "ColostomyBag", title: "ColostomyBag", description: "CB joined later, and I did a nice portait for him in Photoshop!", url: "/images/colostomy.gif", "category_id" => 5)
-link_58 = Link.create(name: "Fanfare", title: "fanfare", description: "Local copy.", url: "/filez/music/fanfare.zip", "category_id" => 6)
-link_59 = Link.create(name: "Me", title: "theme", description: "Local copy.", url: "/filez/music/sdtheme.zip", "category_id" => 6)
-link_60 = Link.create(name: "Laurent", title: "laurent", description: "Local copy.", url: "/filez/music/laurent.zip", "category_id" => 6)
-link_61 = Link.create(name: "Liam", title: "liam", description: "Local copy.", url: "/filez/music/burp.zip", "category_id" => 6)
-link_62 = Link.create(name: "MoveYourAss", title: "MoveYourAss", description: "Local copy.", url: "/filez/music/moveuass.zip", "category_id" => 6)
-link_63 = Link.create(name: "XmasBalls", title: "XmasBalls", description: "Local copy.", url: "/filez/music/xmas97.zip", "category_id" => 6)
-link_64 = Link.create(name: "NeverMindPistols", title: "NeverMindThePistols", description: "Local copy.", url: "/filez/music/teckno.zip", "category_id" => 6)
-link_65 = Link.create(name: "PastIsAnUndiscoveredCountry", title: "PastIsAnUndiscoveredCountry", description: "Local copy.", url: "/filez/music/mono.zip", "category_id" => 6)
-link_66 = Link.create(name: "RaseroTeam", title: "RaseroTeam", description: "Local copy.", url: "/filez/music/rasero.zip", "category_id" => 6)

@@ -6,17 +6,17 @@
       .released<> Released: #{demoInfo.release_date}!!!!
       .downloads<>
         .mainfile<>
-          %a{ :href => demoInfo.site_file.url }<>
-            %img{ :title=> demoInfo.site_file.name, :alt=> demoInfo.site_file.name, :src=> "/images/disk1.gif", :class => "disk", :height => "37", :width => "34" }<>
-          %a{ :href => demoInfo.site_file.url }<>
+          %a{ :href => demoInfo.main_file.url }<>
+            %img{ :title=> demoInfo.main_file.name, :alt=> demoInfo.main_file.name, :src=> "/images/disk1.gif", :class => "disk", :height => "37", :width => "34" }<>
+          %a{ :href => demoInfo.main_file.url }<>
             Shift Clicky 2 Downloady! (#{demoInfo.size}K)
-        - unless demoInfo.site_files.nil?
+        - unless demoInfo.mirrors.nil?
           .mirrors<>
             Also mirrored at
             %ul<>
-              - (0..demoInfo.site_files.size-1).each do |i|
+              - (0..demoInfo.mirrors.size-1).each do |i|
                 %li<>
-                  %a{ :href => demoInfo.site_files[i].url }<>
+                  %a{ :href => demoInfo.mirrors[i].url }<>
                     %img{ :src => "/images/disk#{i+2}.gif", :class => "disk", :title => "#{Demo.mirror_name(i)}", :alt => "#{Demo.mirror_name(i)}", :height => "37", :width => "34"}<>
     .gallery{ :align => "center", :valign => "top"}<>
-      %img{ :src => demoInfo.gallery.site_files.first.url, :title => demoInfo.gallery.site_files.first.description, :alt => demoInfo.gallery.site_files.first.description }<>
+      %img{ :src => demoInfo.gallery.pictures.first.url, :title => demoInfo.gallery.pictures.first.description, :alt => demoInfo.gallery.pictures.first.description }<>

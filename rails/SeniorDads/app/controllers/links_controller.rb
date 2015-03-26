@@ -56,11 +56,12 @@ class LinksController < DadminsController
       crumbtrail = ""
       category_list = []
       current_category = Category.find(category_id)
-      category_list.push( current_category.title )
+      category_list.unshift( current_category.title )
       while (!current_category.parent_category_id.nil?)
         current_category = Category.find(current_category.parent_category_id)
-        category_list.push( "<a href=\"/links/category/#{current_category.id}\">#{current_category.title}</a>")
+        category_list.unshift( "<a href=\"/links/category/#{current_category.id}\">#{current_category.title}</a>")
       end
+      category_list.unshift( "<a href=\"/links/\">Root</a>")
       crumbtrail = category_list.join(' &gt; ')
       crumbtrail
     end
