@@ -4,8 +4,6 @@ class CreateMusicFiles < ActiveRecord::Migration
       t.string :name
       t.string :title
       t.text :description
-      t.references :site_file, index: true
-      t.references :music_file_type, index: true
 
       t.timestamps
     end

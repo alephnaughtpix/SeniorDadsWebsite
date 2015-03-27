@@ -25,6 +25,8 @@ namespace :export do
       @names.push( link.name )
     end
     
+    #Export Site files to Links
+    @musics = {}
     SiteFile.order(:id).all.each do |site_file|
       fixed_name = site_file.name.gsub(/[^A-Za-z0-9]/,"").gsub(/\s/,"_").gsub(/the/i,"").camelize
       title = site_file.name.gsub(/"/,"\\\"")
@@ -35,9 +37,27 @@ namespace :export do
         index += 1
       end
       @names.push(name)
-      category_id = Category.find_by( name: site_file.site_file_type.title ).id
+      category_id = 1
+      case site_file.site_file_type.title
+      when "mus"
+        music_file = MusicFile.find_by( "site_file_id" => site_file.id )
+        category_id = Category.find_by( name: music_file.music_file_type.name ).id
+        @musics[music_file.id] = next_link_id
+      else
+        category_id = Category.find_by( name: site_file.site_file_type.title ).id
+      end
       puts "link_#{next_link_id} = Link.create(name: \"#{name}\", title: \"#{title}\", description: \"#{site_file.description}\", url: \"#{site_file.url}\", \"category_id\" => #{category_id})"
       next_link_id += 1
     end
+
+    # Convert music to Links format
+    next_link_id = 0 
+    MusicFile.order(:id).all.each do |music_file|
+      link_id = @musics[music_file.id]
+      description = music_file.description.gsub(/"/,"\\\"")
+      puts "music_file_#{next_link_id} = MusicFile.create(name: \"#{music_file.name}\", title: \"#{music_file.title}\", description: \"#{description}\", main_file: link_#{link_id})"
+      next_link_id += 1
+    end
+
   end
 end

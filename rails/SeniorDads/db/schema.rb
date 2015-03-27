@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317160613) do
+ActiveRecord::Schema.define(version: 20150327154046) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -112,14 +112,12 @@ ActiveRecord::Schema.define(version: 20150317160613) do
     t.string   "name"
     t.string   "title"
     t.text     "description"
-    t.integer  "site_file_id"
-    t.integer  "music_file_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "link_id"
   end
 
-  add_index "music_files", ["music_file_type_id"], name: "index_music_files_on_music_file_type_id"
-  add_index "music_files", ["site_file_id"], name: "index_music_files_on_site_file_id"
+  add_index "music_files", ["link_id"], name: "index_music_files_on_link_id"
 
   create_table "pictures", force: true do |t|
     t.text     "description"

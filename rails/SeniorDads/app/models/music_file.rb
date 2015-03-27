@@ -1,4 +1,8 @@
 class MusicFile < ActiveRecord::Base
-  belongs_to :site_file
-  belongs_to :music_file_type
+  belongs_to :main_file, :foreign_key => 'link_id', :class_name => "Link"
+  
+  def type 
+    main_file.category
+  end
+  
 end
