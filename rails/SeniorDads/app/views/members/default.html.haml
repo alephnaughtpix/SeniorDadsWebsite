@@ -26,7 +26,7 @@
   - @members.each do |member|
     %tr<>
       %td.member{ :rowspan => 4 }<>
-        %img{ :src => "#{member.site_file.url}", :title => "#{member.title}!!!", :alt => "#{member.title}!!!" }<>
+        %img{ :src => "#{member.gallery.pictures.first.url}", :title => "#{member.title}!!!", :alt => "#{member.title}!!!" }<>
         <br>#{member.title}
       %td.question<>
         %a{ :name => member.name }<>

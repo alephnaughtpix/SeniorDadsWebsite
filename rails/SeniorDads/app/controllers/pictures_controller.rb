@@ -10,7 +10,7 @@ class PicturesController < ApplicationController
   end
 
   def default
-    @pictures = Gallery.find_by( name: 'JPG' ).site_files
+    @pictures = Gallery.find_by( name: 'JPG' ).pictures
     render :layout => "gfx"
   end
 

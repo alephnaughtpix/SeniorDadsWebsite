@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327154046) do
+ActiveRecord::Schema.define(version: 20150330131806) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -23,30 +23,30 @@ ActiveRecord::Schema.define(version: 20150327154046) do
 
   create_table "demo_file_collections", force: true do |t|
     t.integer  "demo_id"
-    t.integer  "site_file_id"
     t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "link_id"
   end
 
   add_index "demo_file_collections", ["demo_id"], name: "index_demo_file_collections_on_demo_id"
-  add_index "demo_file_collections", ["site_file_id"], name: "index_demo_file_collections_on_site_file_id"
+  add_index "demo_file_collections", ["link_id"], name: "index_demo_file_collections_on_link_id"
 
   create_table "demos", force: true do |t|
     t.string   "name"
     t.string   "title"
     t.string   "platform"
-    t.integer  "size"
+    t.float    "size"
     t.datetime "release_date"
-    t.integer  "site_file_id"
     t.integer  "gallery_id"
     t.integer  "demo_order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "link_id"
   end
 
   add_index "demos", ["gallery_id"], name: "index_demos_on_gallery_id"
-  add_index "demos", ["site_file_id"], name: "index_demos_on_site_file_id"
+  add_index "demos", ["link_id"], name: "index_demos_on_link_id"
 
   create_table "galleries", force: true do |t|
     t.string   "name"
@@ -57,13 +57,13 @@ ActiveRecord::Schema.define(version: 20150327154046) do
 
   create_table "gallery_collections", force: true do |t|
     t.integer  "gallery_id"
-    t.integer  "site_file_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "link_id"
   end
 
   add_index "gallery_collections", ["gallery_id"], name: "index_gallery_collections_on_gallery_id"
-  add_index "gallery_collections", ["site_file_id"], name: "index_gallery_collections_on_site_file_id"
+  add_index "gallery_collections", ["link_id"], name: "index_gallery_collections_on_link_id"
 
   create_table "links", force: true do |t|
     t.string   "name"
@@ -86,20 +86,20 @@ ActiveRecord::Schema.define(version: 20150327154046) do
 
   create_table "members", force: true do |t|
     t.string   "name"
-    t.integer  "member_type_id"
     t.string   "title"
     t.datetime "joined"
     t.text     "join_reason"
     t.text     "function"
     t.string   "first_computer"
     t.text     "any_other_comments"
-    t.integer  "site_file_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gallery_id"
+    t.integer  "category_id"
   end
 
-  add_index "members", ["member_type_id"], name: "index_members_on_member_type_id"
-  add_index "members", ["site_file_id"], name: "index_members_on_site_file_id"
+  add_index "members", ["category_id"], name: "index_members_on_category_id"
+  add_index "members", ["gallery_id"], name: "index_members_on_gallery_id"
 
   create_table "music_file_types", force: true do |t|
     t.string   "name"

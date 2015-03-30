@@ -1,4 +1,4 @@
 class GalleryCollection < ActiveRecord::Base
   belongs_to :gallery
-  belongs_to :site_file
+  belongs_to :link
 end
