@@ -7,7 +7,7 @@ class CreateDemos < ActiveRecord::Migration
       t.float :size
       t.datetime :release_date
       t.references :gallery, index: true
-      t.integer :demo_order
+      t.integer :order
 
       t.timestamps
     end

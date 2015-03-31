@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330131806) do
+ActiveRecord::Schema.define(version: 20150331154543) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150330131806) do
     t.float    "size"
     t.datetime "release_date"
     t.integer  "gallery_id"
-    t.integer  "demo_order"
+    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "link_id"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150330131806) do
 
   create_table "gallery_collections", force: true do |t|
     t.integer  "gallery_id"
+    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "link_id"
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 20150330131806) do
     t.string   "url"
     t.text     "description"
     t.integer  "category_id"
+    t.boolean  "public",      default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -89,13 +91,14 @@ ActiveRecord::Schema.define(version: 20150330131806) do
     t.string   "title"
     t.datetime "joined"
     t.text     "join_reason"
-    t.text     "function"
+    t.string   "function"
     t.string   "first_computer"
-    t.text     "any_other_comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "any_other_comments"
     t.integer  "gallery_id"
     t.integer  "category_id"
+    t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "members", ["category_id"], name: "index_members_on_category_id"
@@ -112,6 +115,7 @@ ActiveRecord::Schema.define(version: 20150330131806) do
     t.string   "name"
     t.string   "title"
     t.text     "description"
+    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "link_id"

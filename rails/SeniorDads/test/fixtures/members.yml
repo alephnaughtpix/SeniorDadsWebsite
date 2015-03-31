@@ -2,22 +2,24 @@
 
 one:
   name: MyString
-  member_type_id: 
   title: MyString
-  joined: 2015-03-11 14:14:48
+  joined: 2015-03-31 16:45:43
   join_reason: MyText
-  function: MyText
+  function: MyString
   first_computer: MyString
-  any_other_comments: MyText
-  site_file_id: 
+  any_other_comments: MyString
+  gallery_id: 
+  category_id: 
+  order: 1
 
 two:
   name: MyString
-  member_type_id: 
   title: MyString
-  joined: 2015-03-11 14:14:48
+  joined: 2015-03-31 16:45:43
   join_reason: MyText
-  function: MyText
+  function: MyString
   first_computer: MyString
-  any_other_comments: MyText
-  site_file_id: 
+  any_other_comments: MyString
+  gallery_id: 
+  category_id: 
+  order: 1

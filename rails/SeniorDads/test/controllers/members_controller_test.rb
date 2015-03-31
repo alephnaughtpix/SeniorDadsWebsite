@@ -18,7 +18,7 @@ class MembersControllerTest < ActionController::TestCase
 
   test "should create member" do
     assert_difference('Member.count') do
-      post :create, member: { any_other_comments: @member.any_other_comments, first_computer: @member.first_computer, function: @member.function, join_reason: @member.join_reason, joined: @member.joined, member_type_id: @member.member_type_id, name: @member.name, site_file_id: @member.site_file_id, title: @member.title }
+      post :create, member: { any_other_comments: @member.any_other_comments, category_id: @member.category_id, first_computer: @member.first_computer, function: @member.function, gallery_id: @member.gallery_id, join_reason: @member.join_reason, joined: @member.joined, name: @member.name, order: @member.order, title: @member.title }
     end
 
     assert_redirected_to member_path(assigns(:member))
@@ -35,7 +35,7 @@ class MembersControllerTest < ActionController::TestCase
   end
 
   test "should update member" do
-    patch :update, id: @member, member: { any_other_comments: @member.any_other_comments, first_computer: @member.first_computer, function: @member.function, join_reason: @member.join_reason, joined: @member.joined, member_type_id: @member.member_type_id, name: @member.name, site_file_id: @member.site_file_id, title: @member.title }
+    patch :update, id: @member, member: { any_other_comments: @member.any_other_comments, category_id: @member.category_id, first_computer: @member.first_computer, function: @member.function, gallery_id: @member.gallery_id, join_reason: @member.join_reason, joined: @member.joined, name: @member.name, order: @member.order, title: @member.title }
     assert_redirected_to member_path(assigns(:member))
   end
 

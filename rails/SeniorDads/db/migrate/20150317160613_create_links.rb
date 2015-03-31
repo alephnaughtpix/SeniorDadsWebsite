@@ -6,7 +6,8 @@ class CreateLinks < ActiveRecord::Migration
       t.string :url
       t.text :description
       t.references :category, index: true
-
+      t.boolean :public, :default => true
+      
       t.timestamps
     end
   end

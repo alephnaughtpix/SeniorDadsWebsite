@@ -4,9 +4,6 @@
   %b Name:
   = @member.name
 %p
-  %b Member type:
-  = @member.member_type
-%p
   %b Title:
   = @member.title
 %p
@@ -25,8 +22,14 @@
   %b Any other comments:
   = @member.any_other_comments
 %p
-  %b Site file:
-  = @member.site_file
+  %b Gallery:
+  = @member.gallery
+%p
+  %b Category:
+  = @member.category
+%p
+  %b Order:
+  = @member.order
 
 = link_to 'Edit', edit_member_path(@member)
 \|

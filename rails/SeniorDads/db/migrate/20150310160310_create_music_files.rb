@@ -4,6 +4,7 @@ class CreateMusicFiles < ActiveRecord::Migration
       t.string :name
       t.string :title
       t.text :description
+      t.integer :order
 
       t.timestamps
     end

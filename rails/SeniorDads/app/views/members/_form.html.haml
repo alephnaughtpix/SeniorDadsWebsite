@@ -10,9 +10,6 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :member_type
-    = f.text_field :member_type
-  .field
     = f.label :title
     = f.text_field :title
   .field
@@ -23,15 +20,21 @@
     = f.text_area :join_reason
   .field
     = f.label :function
-    = f.text_area :function
+    = f.text_field :function
   .field
     = f.label :first_computer
     = f.text_field :first_computer
   .field
     = f.label :any_other_comments
-    = f.text_area :any_other_comments
+    = f.text_field :any_other_comments
   .field
-    = f.label :site_file
-    = f.text_field :site_file
+    = f.label :gallery
+    = f.text_field :gallery
+  .field
+    = f.label :category
+    = f.text_field :category
+  .field
+    = f.label :order
+    = f.number_field :order
   .actions
     = f.submit 'Save'

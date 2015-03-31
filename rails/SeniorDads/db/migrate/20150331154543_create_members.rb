@@ -5,9 +5,12 @@ class CreateMembers < ActiveRecord::Migration
       t.string :title
       t.datetime :joined
       t.text :join_reason
-      t.text :function
+      t.string :function
       t.string :first_computer
-      t.text :any_other_comments
+      t.string :any_other_comments
+      t.references :gallery, index: true
+      t.references :category, index: true
+      t.integer :order
 
       t.timestamps
     end
