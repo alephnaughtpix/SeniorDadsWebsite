@@ -29,10 +29,10 @@
     = f.text_field :any_other_comments
   .field
     = f.label :gallery
-    = f.text_field :gallery
+    <a href="/galleries/#{@member.gallery.id}/edit">#{@member.gallery.title}</a>
   .field
     = f.label :category
-    = f.text_field :category
+    = f.collection_select(:category_id, @categories, :id, :title)
   .field
     = f.label :order
     = f.number_field :order

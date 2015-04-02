@@ -5,7 +5,6 @@
     %tr
       %th Name
       %th Title
-      %th Site files
       %th
       %th
       %th
@@ -15,7 +14,6 @@
       %tr
         %td= gallery.name
         %td= gallery.title
-        %td= gallery.site_files
         %td= link_to 'Show', gallery
         %td= link_to 'Edit', edit_gallery_path(gallery)
         %td= link_to 'Destroy', gallery, :method => :delete, :data => { :confirm => 'Are you sure?' }

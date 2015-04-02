@@ -13,7 +13,14 @@
     = f.label :title
     = f.text_field :title
   .field
-    = f.label :site_files
-    = f.text_field :site_files
+    = f.label :pictures
+    %table<>
+      - @gallery.pictures.each do |link|
+        %tr<>
+          %td<>
+            <a href="/links/#{link.id}/edit">#{link.title}</a>
+          %td<>
+            <a href="/links/#{link.id}/destroy">Delete</a>
+    <a href="/links/new">New</a>
   .actions
     = f.submit 'Save'

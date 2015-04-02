@@ -1,4 +1,4 @@
-class GalleriesController < ApplicationController
+class GalleriesController < DadminsController
   before_action :set_gallery, only: [:show, :edit, :update, :destroy]
 
   # GET /galleries

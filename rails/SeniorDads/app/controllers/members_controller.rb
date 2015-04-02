@@ -28,6 +28,7 @@ class MembersController < DadminsController
   end
 
   def edit
+    @categories = Category.where( parent_category_id: Category.where( name: "member" ).first.id )
   end
 
   def create
