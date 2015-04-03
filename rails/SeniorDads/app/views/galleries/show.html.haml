@@ -7,9 +7,12 @@
   %b Title:
   = @gallery.title
 %p
-  %b Site files:
-  = @gallery.site_files
-
+  %b Pcitures:
+  .picture_editor<>
+    .pictures<>
+      - @gallery.pictures.each do |link|
+        .picture<>
+          <img src="#{link.url}" id="picture#{link.id}" />
 = link_to 'Edit', edit_gallery_path(@gallery)
 \|
 = link_to 'Back', galleries_path

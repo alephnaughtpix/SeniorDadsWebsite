@@ -14,13 +14,16 @@
     = f.text_field :title
   .field
     = f.label :pictures
-    %table<>
-      - @gallery.pictures.each do |link|
-        %tr<>
-          %td<>
-            <a href="/links/#{link.id}/edit">#{link.title}</a>
-          %td<>
-            <a href="/links/#{link.id}/destroy">Delete</a>
-    <a href="/links/new">New</a>
+    .picture_editor<>
+      .pictures<>
+        - @gallery.pictures.each do |link|
+          .picture<>
+            <a href="/links/#{link.id}/edit"><img src="#{link.url}" id="picture#{link.id}" /></a>
+            .delete<>
+              %a{ :href => "/links/#{link.id}/destroy"}<>
+                %img{ :src => "/images/dadmin/delete.png", :alt => "DELETE!!",  :title => "DELETE!!" }<>
+        .picture.add<>
+          %a{ :href => "/links/new"}<>
+            %img{ :src => "/images/dadmin/add.png", :alt => "NEW!!",  :title => "New!!" }<>
   .actions
     = f.submit 'Save'

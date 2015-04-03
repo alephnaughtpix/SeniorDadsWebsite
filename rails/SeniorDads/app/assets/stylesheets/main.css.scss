@@ -19,10 +19,12 @@ $mainTextCol: Yellow;
   }
 }
 
-@mixin position($x: 0px, $y: 0px) {
+@mixin position($x: 0px, $y: 0px, $reverseX: false, $reverseY: false) {
   position: absolute;
-  left: $x;
-  top: $y;
+  @if ($reverseX) { right: $x; }
+  @if (not($reverseX)) { left: $x; }
+  @if ($reverseY) { bottom: $y; }
+  @if (not($reverseY)) { top: $y; }
 }
 
 @mixin mainTextStyle {
@@ -53,6 +55,12 @@ $mainTextCol: Yellow;
       }
     }
   }
+}
+
+@mixin boxShadow( $h:4px, $v:7px, $blur:5px, $spread:0px, $color:rgba(0,0,0,0.75) ) {
+  -webkit-box-shadow: $h $v $blur $spread $color;
+  -moz-box-shadow: $h $v $blur $spread $color;
+  box-shadow:  $h $v $blur $spread $color;
 }
 
 // Blink keyframes
@@ -797,6 +805,39 @@ table#dudes{
           font-weight: bold;
         }
       }
+    }
+  }
+}
+
+body#dadmin {
+  @include centreBox('.picture_editor', '.pictures');
+  .pictures {
+    .picture {
+      float: left;
+      width: 160px;
+      height: 150px;
+      position: relative;
+      margin: {
+        right: 20px;
+        bottom: 20px;
+      }
+      img {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+        @include boxShadow();
+      }
+      .delete {
+        @include position(0px, 0px, true);
+        img {
+          max-width: 20px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .add img {
+      @include boxShadow(0px, 0px, 0px, 0px, transparent);
     }
   }
 }
