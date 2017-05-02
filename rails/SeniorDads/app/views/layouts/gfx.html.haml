@@ -5,12 +5,11 @@
 - content_for :description do
   I am art- view me.
 - content_for :keywords do
-  art, drawings, digital, graphics, gfx, fiks, jackson, pollock, wacky, gallery, beep-beep!!!!
+  art, drawings2, digital, graphics, gfx, fiks, jackson, pollock, wacky, gallery, beep-beep!!!!
 - content_for :style_id, flush: true do
   gfx
 - content_for :head do
-  %link{ :rel => "stylesheet", :type => "text/css", :href => "../css/slimbox/slimbox2.css"}<>
-  %script{ :language => "Javascript", :src => "../js/website/slimbox2.js"}<>
+  = render "partials/gallery_code"
 - content_for :main do
   = render "partials/last_updated"
   = render "partials/sub_header", :rootUrl => "../default.html", :sectionTitle => "gF3ckx!!1", :sectionUrl => "."

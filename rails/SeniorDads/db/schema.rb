@@ -36,17 +36,26 @@ ActiveRecord::Schema.define(version: 20150331154543) do
     t.string   "name"
     t.string   "title"
     t.string   "platform"
+    t.string   "dg_title"
+    t.string   "dg_description"
     t.float    "size"
     t.datetime "release_date"
     t.integer  "gallery_id"
     t.integer  "order"
+    t.boolean  "public",          default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "link_id"
+    t.integer  "youtube_link_id"
+    t.integer  "html5_link_id"
+    t.integer  "source_link_id"
   end
 
   add_index "demos", ["gallery_id"], name: "index_demos_on_gallery_id"
+  add_index "demos", ["html5_link_id"], name: "index_demos_on_html5_link_id"
   add_index "demos", ["link_id"], name: "index_demos_on_link_id"
+  add_index "demos", ["source_link_id"], name: "index_demos_on_source_link_id"
+  add_index "demos", ["youtube_link_id"], name: "index_demos_on_youtube_link_id"
 
   create_table "galleries", force: true do |t|
     t.string   "name"

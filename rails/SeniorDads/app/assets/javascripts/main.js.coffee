@@ -41,6 +41,23 @@ headers = () ->
     else
       $(this).css('cursor', 'default')
   null
+  
+# SD Gallery slideshow
+SdGallery = (element) ->
+  this.pos = 0;
+  this.elements = $(element).find('a')
+  this.length = this.elements.length
+  if (this.length > 1)
+    this.elements.hide()
+    this.elements.first().show()
+    this.flipPic = () ->
+      $(this.elements[this.pos++]).fadeOut("slow")
+      if (this.pos == this.length)
+        this.pos = 0;
+      $(this.elements[this.pos]).fadeIn("slow")
+      null
+    this.interval = setInterval this.flipPic, 5000  
+  null
 
 # Tokenise area and apply delegate styling function to it.
 tokenify = (element, stylingFunction) ->
@@ -51,7 +68,7 @@ tokenify = (element, stylingFunction) ->
       unless (token[0] is "<")                      # Make sure we're not inside an HTML tag!!
         words = token.split(/\s+/) 			            # Split by whitespace into words
         # Apply our delegate styling function to each word unless it's blank
-        output += stylingFunction(word) for word in words when word isnt ""
+        output += (stylingFunction(word) + " ") for word in words when word isnt ""
       else
         # If we're in an HTML tag, just add it unaltered to the output.
         output += token
@@ -63,7 +80,7 @@ tokenify = (element, stylingFunction) ->
 leetSpeak = () ->
   tokenify '.l33TsP33k', (word) ->
     # Apply style to first letter of word, and add trailing space
-    "<span class=\"l33Tf1RsT\">" + word[0] + "</span>" + word.substring(1,word.length) + " "
+    "<span class=\"l33Tf1RsT\">" + word[0] + "</span>" + word.substring(1,word.length)
   null
 
 # Doddering Git's "l33TsP33k" styling- extra strength!!
@@ -78,7 +95,7 @@ leetSpeakExtra = () ->
           "<span class=\"l33Tf1RsT\">" + word[k] + "</span>"
         else word[k]
       apply = !apply
-    output;
+    output
   null
 
 # FAQ styling
@@ -117,3 +134,11 @@ $(document).ready ->
     $(this).attr('title','[ m0R3!!!11!1 ]')
     $(this).click -> window.location = $(this).attr('rel')
     null
+    
+  # "Gallery" setup
+  $('.gallery').each ->
+    SdGallery(this)
+    null
+    
+  # Sortable (For "Dadmin")
+  # $('.sortable').sortable( handle: '.handle' )

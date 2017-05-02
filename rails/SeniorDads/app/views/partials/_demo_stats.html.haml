@@ -3,7 +3,7 @@
     .stats<>
       .header<> #{demoInfo.title.html_safe}
       .platform<> (#{demoInfo.platform})
-      .released<> Released: #{demoInfo.release_date}!!!!
+      .released<> Released: #{demoInfo.release_date_formatted}!!!!
       .downloads<>
         .mainfile<>
           %a{ :href => demoInfo.main_file.url }<>
@@ -19,4 +19,7 @@
                   %a{ :href => demoInfo.mirrors[i].url }<>
                     %img{ :src => "/images/disk#{i+2}.gif", :class => "disk", :title => "#{Demo.mirror_name(i)}", :alt => "#{Demo.mirror_name(i)}", :height => "37", :width => "34"}<>
     .gallery{ :align => "center", :valign => "top"}<>
-      %img{ :src => demoInfo.gallery.pictures.first.url, :title => demoInfo.gallery.pictures.first.description, :alt => demoInfo.gallery.pictures.first.description }<>
+      - unless demoInfo.gallery.pictures.nil?
+        - (0..demoInfo.gallery.pictures.size-1).each do |i|
+          %a{ :rel => "lightbox-Demo", :title => demoInfo.gallery.pictures[i].description, :alt => demoInfo.gallery.pictures[i].description, :target => "_blank", :href => demoInfo.gallery.pictures[i].url }<>
+            %img{ :src => demoInfo.gallery.pictures[i].url, :title => demoInfo.gallery.pictures[i].description, :alt => demoInfo.gallery.pictures[i].description }<>

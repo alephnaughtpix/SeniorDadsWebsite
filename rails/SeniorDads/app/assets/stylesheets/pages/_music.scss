@@ -1,0 +1,28 @@
+#choons {
+  ul.musiclist {
+    list-style: none;
+    li {
+        background: {
+          position: top left;
+          repeat: no-repeat;
+        }
+        padding-left: 40px;
+        padding-bottom: 15px;
+        &.musicitem {
+          background-image: url(../images/disk.gif);
+        }
+        &.mono {
+          background-image: url(../images/disk2.gif);
+        }
+    }
+    .title {
+      font-weight: bold;
+      font-size: larger;
+    }
+    .info {
+        a {
+          font-weight: bold;
+        }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+- content_for :sub_title do
+  THE 'DEF DEMO!!!
+- content_for :author do
+  Old Fart of The Senior Dads
+- content_for :description do
+  The megamighty flippin' best are back with a new demo- in HTML5 and CODEF!!! We call it- the 'DEF DEMO!!!!!!
+- content_for :sub_keywords do
+  CODEF, Javascript, HTML5, Def, Demo
+- content_for :header do
+  = render "partials/html5Demo"
+  = javascript_include_tag "SeniorDads.HTML5/demos/def/main.js" 
+  %script{ :language => "Javascript", type => "text/javascript" }<>
+    var s;function d(){DEMO_ROOT="../js/SeniorDads.HTML5/demos";s=new SeniorDads.Demos.Player(document.getElementById('demo'),'democanvas',SeniorDads.Demos.DefDemo);}
+    window.onload = d;
+- content_for :intro_content do
+  %div{ :align => "center" }<>
+    %h4<>
+      %span{ :style => "font-size:xx-large; font-face: Arial Black; font-weight: bold"}<> YES!!!
+      %br<>
+      %span{ :style => "font-size:larger; font-face: Arial Black; font-weight: bold;"}<>
+        The megamighty <span class="blink" style="color:white">flippin'</span> best are back!!!!!!!
+      %em
+        It was twenty years ago today,<br/>The Dads taught the Atari world the coding way!<br/>They've been going in and out of style<br/>But they're guaranteed to create a killer 68000-based demo program file!!!<br/>So let us introduce to you...
+      %span{ :style => "font-size:larger; font-face: Arial Black; font-style: italic; font-weight: bold; color: #aaffaa"}<>
+        A new demo in <span class="blink">CODEF</span>!!!!!
+      %p<> Called...
+      %span{ :style => "font-size:xx-large; font-face: Arial Black; font-weight: normal"}<>
+        the <span style="colour:white;">'DEF DEMO!!!
+- content_for :main_content do
+  #description<>
+	%h4<> TO RUN:
+	%blockquote<>
+	  %em<>
+        Click on the play button on the screen below!!!! Click on the top right of the screen to go into fullscreen!!!! If you're running downloaded version, follow the instructions in the README.txt!!!!!<br/><br/>This demo runs on all decent computes running decent HTML5 browsers (eg Google Chrome)!!!!!!!
+      %p<>
+      	%strong<>
+      	  Yes!!!!! <span class="blink">WE'RE BACK!!!</span> with a new <span style="color:white;">HTML5 demo</span>!!!!!!!!!!
+      %blockquote<>
+      	%p<> Wot your about to see is a new standard in demo production!!!!! If you think this is Youtube, your so wrong!!!! It's happening right now in your browsey-wowsey!!!!!
+      	%p<> We were planning to do a new Atari demo for our 20th anniversery!!!! Then we saw someone done an <a href="http://wab.com/?screen=302" target="_blank">Atari demo on tha web browser</a>, and we thot: "Hay!!!! Let's do that!!!!".
+      	%p<> So we toiled for yonks learning about the <a href="http://codef.santo.fr/" target="_blank">CODEF Javscript/HTML5 malarkey</a>, and here are the first fruits of our labour!!!!
+      	.demoCover<>
+      	  #demo"<>
+      	%p<> &nbsp;
+  %hr<>
+  #creditsWrapperExtended<>
+    #credits<>
+      .header<>
+		%h1<> Credits for this earth shattering demo!!!!
+	  .credit<>
+        .deed<>   Code
+        .by<>     <a href="../crew/dudes.html#Old_Fart">Old Fart</a>
+        .by<>     <a href="../crew/dudes.html#Doddering_git">Doddering Git</a>
+        .description<>
+          %p<> Even the mighty CODEF wasn't quite what we needed to acheive this, so we wrote a highly advanced demo system to make this monumental demo possible!!!
+          %p<> We have named this highly advanced demo system <span style="color:white">'THE SENIOR DADS ADVANCED DEMO SYSTEM'</span>.
+	  .credit<>
+        .deed<>   Music
+        .by<>     <a href="../crew/dudes.html#Dame_Vera_Lynn">Dame Vera Lynn</a>
+        .description<>
+          %ul<>
+            %li<>
+              Inspired by Top DJ Sasha, The Dame wrote <strong><em>"<a href="../music/default.html#Sashy">Sashy Shit</a>"</em></strong>.
+            %li<>
+              Also inspired by the demo crew Rasero Team and their demo "Senior Fucks Out", he wrote <strong><em>"<a href="../music/default.html#RaseroTeam">Rasero Team Fuck Out</a>"</em></strong>.
+	  .credit<>
+        .deed<>   GFX
+        .by<>     <a href="../crew/dudes.html#Jackson_Pollock">Jackson Pollock</a>

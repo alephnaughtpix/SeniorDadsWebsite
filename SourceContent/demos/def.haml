@@ -1,0 +1,37 @@
+- require "#{File.dirname(__FILE__)}/../code/SiteTasks"
+- demoInfo = Demo.GetByID( 10 )
+!!!
+%html<>
+  %head<>
+    %title<> s3N10r dAdz d3M0z3C!!!111: THE 'DEF DEMO!!!
+    %meta{ :name => "Author", :content => "Old Fart of The Senior Dads"}<>
+    %meta{ :name => "Description", :content => "HA! So you think we in the SD do FAKE demos, do you!!! Well, we'll do a FAKE demo for you!!!!!"}<>
+    %meta{ :name => "KeyWords", :content => "Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, Falcon, ST, STFM, STE, Pacifist, Ultimate, Fake, Gem, desktop, emulator"}<>
+    =render_partial :header_files
+  %body#demos<>
+    =render_partial :no_javascript
+    .lastUpdated<>
+    =render_partial :sub_header, :rootUrl => "../default.html", :sectionTitle => "d3M0z3!", :sectionUrl => "default.html"
+    %div{ :align => "center" }<>
+      %h4{ :style => "Arial Black"}<>
+        %span{ :style => "font-size:xx-large;"}<> SO!!!<br/>
+        %span{ :style => "font-size:larger;"}<> We're a FAKE</FONT> demo crew, are we?
+      %h4<>
+        %span{ :style => "font-size:x-large;"}<> <em>Well, we'll show you!!!!</em>
+      %p<> With...
+      %h1{ :style => "font-family: Lucida Console;" }<> the ULTIMATE FAKE DEMO!!!
+    =render_partial :demo_stats, :demoInfo => demoInfo
+    #description
+      %h4<> TO RUN:
+      %ul<>
+        %img(src="../images/phase4mono.gif" title="pHas3 40uR sT3r30!!11! (In Mono!)" alt="pHas3 40uR sT3r30!!11! (In Mono!)" height="69" width="70" align="right")<>
+        %p<>
+          Double click on "<B>FAKE.PRG</B>". This demo works on all Hasbro compooterz!!! So even Optimus Prime will be able to run this lovely demo!!! Which is funny, because our code is <B>OPTIMISED PRIME</B>!!!!! Ha ha ha ha, are we wacky or wot?
+      %p<>
+        %a{ :href => "pc.html" }<>
+          %img(src="../images/demos/pacifist.gif" title="pAc1F1sT c0MpAt1Bl3!!1!" alt="pAc1F1sT c0MpAt1Bl3!!1!" height="60" width="147" align="right")<>
+        <B>What the <span style="color:#ffffff; font-size: xx-large;" class="blink">feck</span> (!!!) is the ULTIMATE FAKE DEMO all about!?!?!?!?!??!</B>
+      %p<> This demo was done in a little bit of spare time before finishing <a href="mono.html"><B>Monomental</B></A>! We did it one night after reading yet another bloody thingy saying were a <I>"fake demo crew"</I>. Even worse, they said we did <I>"fake demos"</I>!!!!!!!!!! We were a little annoyed before, and this was the drinking straw that broke the lama's back! (Don't tell Jeff Minter!)
+      %p<> <B>Flippin' feckin' nora!!</B> Do these peeps knows what a fake demo really is???!?!?
+      %p<> Well, we did this little demo to show them what a <B>REAL</B> fake demo is!!!
+      %p<> Just run it and see!!!

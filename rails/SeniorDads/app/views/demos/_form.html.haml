@@ -7,11 +7,17 @@
           %li= msg
 
   .field
-    = f.label :ref
-    = f.text_field :ref
-  .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :dg_title
+    = f.text_field :dg_title
+  .field
+    = f.label :dg_description
+    = f.text_field :dg_description
   .field
     = f.label :platform
     = f.text_field :platform
@@ -22,8 +28,18 @@
     = f.label :release_date
     = f.datetime_select :release_date
   .field
-    = f.label :site_file
-    = f.text_field :site_file
+    = f.label :link_id
+	- @categories = Category.where( name: "bin" )
+    = f.collection_select(:link_id, @categories, :id, :title)
+  .field
+    = f.label :youtube_link_id
+    = f.text_field :youtube_link_id
+  .field
+    = f.label :html5_link_id
+    = f.text_field :html5_link_id
+  .field
+    = f.label :source_link_id
+    = f.text_field :source_link_id
   .field
     = f.label :gallery
     = f.text_field :gallery

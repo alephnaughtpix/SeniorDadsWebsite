@@ -1,0 +1,60 @@
+@mixin linkCol($link, $visited, $hover, $active) {
+  a {
+    &:link {
+      color: $link;
+    }
+    &:visited {
+      color: $visited;
+    }
+    &:active {
+      color: $active;
+    }
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+
+@mixin position($x: 0px, $y: 0px, $reverseX: false, $reverseY: false) {
+  position: absolute;
+  @if ($reverseX) { right: $x; }
+  @if (not($reverseX)) { left: $x; }
+  @if ($reverseY) { bottom: $y; }
+  @if (not($reverseY)) { top: $y; }
+}
+
+@mixin mainTextStyle {
+  color: $mainTextCol;
+  font: {
+    family : Times New Roman, Times, Garamond, serif;
+    size: 14px;
+    weight: normal;
+  }
+  @include linkCol( #77ff00, red, white, white );
+}
+
+@mixin preFormattedText {
+  white-space: pre ;
+  display: block;
+  unicode-bidi: embed;
+  font-family: Courier, san-serif;
+}
+
+@mixin centreBox( $containerName : ".container", $contentBox : ".content", $width : 75% ) {
+  #{$containerName} {
+    width: 100%;
+    #{$contentBox} {
+      width: $width;
+      margin: {
+        left:  auto;
+        right: auto;
+      }
+    }
+  }
+}
+
+@mixin boxShadow( $h:4px, $v:7px, $blur:5px, $spread:0px, $color:rgba(0,0,0,0.75) ) {
+  -webkit-box-shadow: $h $v $blur $spread $color;
+  -moz-box-shadow: $h $v $blur $spread $color;
+  box-shadow:  $h $v $blur $spread $color;
+}

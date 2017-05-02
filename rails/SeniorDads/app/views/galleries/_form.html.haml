@@ -15,10 +15,11 @@
   .field
     = f.label :pictures
     .picture_editor<>
-      .pictures<>
+      .pictures.sortable<>
         - @gallery.pictures.each do |link|
           .picture<>
             <a href="/links/#{link.id}/edit"><img src="#{link.url}" id="picture#{link.id}" /></a>
+            .handle<>
             .delete<>
               %a{ :href => "/links/#{link.id}/destroy"}<>
                 %img{ :src => "/images/dadmin/delete.png", :alt => "DELETE!!",  :title => "DELETE!!" }<>

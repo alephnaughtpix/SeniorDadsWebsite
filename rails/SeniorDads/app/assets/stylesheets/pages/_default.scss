@@ -1,0 +1,70 @@
+// Default page style
+
+body {
+  @include mainTextStyle;
+  background: {
+    color: #000077;
+    image: url(/images/sad_back.gif);
+    repeat: repeat;
+  }
+  .highlight {
+    color: white;
+  }
+  .blink {
+    animation: blinker 1s step-end infinite;
+    -webkit-animation: blinker 1s step-end infinite;
+  }
+  .formattedtext {
+    @extend .highlight;
+    white-space: pre ; 
+    display: block; 
+    unicode-bidi: embed;
+    font-family: Courier, san-serif;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+  .lastUpdated, .urlLastUpdated {
+    font: {
+      style: italic;
+      size: smaller;
+    }
+    text-align: right;
+  }
+  
+  .counter {
+    font: {
+      face: Comic Sans, sans-serif;
+      weight: bold;
+    }
+  }
+
+  .link {
+    cursor: pointer;
+  }
+
+  .more {
+    width: 211px;
+    height: 82px;
+    background: url(../images/more.gif) center;
+    cursor: pointer;
+    margin: 20px;
+    float: right;
+    #MonoMental & {
+      background: url(../images/demos/mono/more.gif) center;
+    }
+  }
+}
+
+.l33TsP33k {
+  font: {
+    size: xx-large;
+  }
+  .l33Tf1RsT {
+    font: {
+      size: initial;
+    }
+  }
+}
+

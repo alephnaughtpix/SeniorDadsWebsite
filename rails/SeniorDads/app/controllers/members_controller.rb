@@ -10,7 +10,7 @@ class MembersController < DadminsController
   end
   
   def default
-    @members = Member.all
+    @members = Member.all.all.sort_by{ |h| -h.order.to_i }
     render :layout => "application"
   end
   

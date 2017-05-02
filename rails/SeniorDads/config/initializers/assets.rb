@@ -7,7 +7,9 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( main.css )
+Rails.application.config.assets.precompile += %w( slimbox/slimbox2.css )
 
 Rails.application.config.assets.precompile += %w( main.js )
 Rails.application.config.assets.precompile += %w( jquery-1.11.0.min.js )
 Rails.application.config.assets.precompile += %w( jquery.modern-blink.js )
+Rails.application.config.assets.precompile += %w( slimbox2.js )

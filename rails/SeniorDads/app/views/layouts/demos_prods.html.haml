@@ -1,3 +1,5 @@
+- content_for :head do
+  = render "partials/gallery_code"
 - content_for :content do
   = yield(:intro_content)
   = render "partials/demo_stats", :demoInfo => @demo
