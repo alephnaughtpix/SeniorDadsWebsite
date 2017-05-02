@@ -7,7 +7,7 @@ class DudesController < ApplicationController
   end
 
   def index
-  	@dudes = Members.all.sort_by{ |h| -h.order.to_i }
+  	@dudes = Members.all.order(:order)
     render :default
   end
 

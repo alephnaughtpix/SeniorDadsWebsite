@@ -29,9 +29,13 @@ Rails.application.routes.draw do
   get '/crew/', to: 'members#default'
   get '/crew/default.html', to: 'members#default'
   get '/crew/dudes.html', to: 'members#default'
+  get '/crew/', to: 'members#default'
+  get '/dudes/default.html', to: 'members#default'
+  get '/dudes/dudes.html', to: 'members#default'
 
   # FAQ
   get '/crew/faq.html', to: 'members#faq'
+  get '/dudes/faq.html', to: 'members#default'
 
   # DEMOS section: ====================================================================================================
 
