@@ -18,6 +18,10 @@
     .title {
       font-weight: bold;
       font-size: larger;
+      .type {
+        font-style: italic;
+        margin-left: 5px;
+      }
     }
     .info {
         a {

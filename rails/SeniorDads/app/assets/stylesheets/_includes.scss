@@ -1,12 +1,13 @@
-@import "config/variables";
-@import "config/colours";
-@import "config/mixins";
+@import '../scss/config/variables';
+@import '../scss/config/colours';
+@import '../scss/config/mixins';
+@import '../scss/config/variables';
 
 // Pages
-@import "pages/default";
-@import "pages/crew";
-@import "pages/demos";
-@import "pages/gfx";
-@import "pages/music";
-@import "pages/features";
+@import '../scss/pages/default';
+@import '../scss/pages/crew';
+@import '../scss/pages/demos';
+@import '../scss/pages/gfx';
+@import '../scss/pages/music';
+@import '../scss/pages/features';
 

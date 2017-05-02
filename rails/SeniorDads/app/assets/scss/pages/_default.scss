@@ -1,18 +1,14 @@
 // Default page style
 
+// Set up default centered box style
+@include centreBox();
+
 body {
   @include mainTextStyle;
   background: {
     color: #000077;
     image: url(/images/sad_back.gif);
     repeat: repeat;
-  }
-  .highlight {
-    color: white;
-  }
-  .blink {
-    animation: blinker 1s step-end infinite;
-    -webkit-animation: blinker 1s step-end infinite;
   }
   .formattedtext {
     @extend .highlight;
@@ -66,5 +62,17 @@ body {
       size: initial;
     }
   }
+}
+
+.highlight {
+  color: white;
+}
+.blink {
+  animation: blinker 1s step-end infinite;
+  -webkit-animation: blinker 1s step-end infinite;
+}
+
+.bigger2 {
+  font-size: x-large;
 }
 

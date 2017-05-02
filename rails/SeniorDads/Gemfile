@@ -1,14 +1,16 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'compass-rails'
 # Use HAML for Rails
 gem 'haml-rails', '>= 0.3.4', :group => :development
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+#gem 'sass-rails'
+gem 'sass-globbing'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -17,6 +19,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 # Devise authentication for "Dadmin" sections
 gem 'devise'
+# Breakpoint for responsive CSS
+gem 'breakpoint'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

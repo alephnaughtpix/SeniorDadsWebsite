@@ -8,7 +8,7 @@ body {
 table#dudes{
   .header, .member {
     font-weight: bold;
-    @extend .bigger2
+    font-size: $fontBigger2;
   }
   .member {
     color: white;

@@ -24,6 +24,7 @@
       .title<>
         %a(name="#{music_file.name}")<>
         %a(href="#{music_file.main_file.url}")<> #{music_file.title}
+        %span.type<> (#{music_file.type.title}!!!!)
       .info<>
         #{music_file.description.html_safe}
 %h3<> Is that all, Mr Music Man?
