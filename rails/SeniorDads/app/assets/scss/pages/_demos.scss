@@ -115,13 +115,13 @@
         }
       }
 
-      #saggie {
+      .saggie {
         width: 100%;
         position: relative;
         .title {
           width: 164px;
           height: 120px;
-          background: url(../images/features/saggie/saggie_mini.gif) center;
+          background: url(#{$imageDir}/features/saggie/saggie_mini.gif) center;
           margin-right: 10px;
         }
         .feature {
@@ -138,7 +138,7 @@
     color: white;
     background: {
       color: black;
-      image: url(../images/demos/mono/sad_back.gif);
+      image: url(#{$imageDir}/demos/mono/sad_back.gif);
     } 
     @include linkCol( #AAAAAA, #999999, #FFFFFF, #FFFFFF );
   }

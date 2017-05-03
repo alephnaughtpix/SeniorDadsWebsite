@@ -1,8 +1,7 @@
-body {
-  &#features {
+#features {
     background-image: url(../images/features/feat_back.jpg);
-  }
-  &#knut {
+}
+#knut {
     font: {
       face: Comic Sans MS, sans-serif;
     }
@@ -12,30 +11,30 @@ body {
       image: url(../images/features/knut/backg.jpg);
     } 
     @include linkCol( #FFFF00, #FFFF80, #00FF40, white );
-  }
-  &#netbest {
+}
+#netbest {
     color: white;
     background: {
       color: black;
       image: url(../images/features/netbest/netbest_back.jpg);
     } 
     @include linkCol( #00ffff, #ff80ff, #ffff80, white );
-  }
-  &#presstrail {
+}
+#presstrail {
     color: black;
     background: {
       color: #FFFFC0;
       image: url(/images/features/presstrail/ptrail_bkg.gif);
     } 
     @include linkCol( #0000FF, #800080, #FF00FF, white );
-  }
-  &#saggie {
+}
+body#saggie {
     background: {
       color: #FBF8F4;
       image: url(../images/features/saggie/saggie_back.gif);
     } 
   }
-}
+  
 
 #features{
   @include centreBox('#doxListContainer', '#doxList');

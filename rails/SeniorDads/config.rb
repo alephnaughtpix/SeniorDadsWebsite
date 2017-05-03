@@ -22,8 +22,9 @@ relative_assets = true
 
 preferred_syntax = :scss
 
-output_style = :expanded
-line_comments = true
+output_style = :compressed
+#output_style = :expanded
+#line_comments = true
 
 # This is where the magic happens, nothing too fancy though...
 # on_stylesheet_saved do
